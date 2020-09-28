@@ -1,0 +1,18 @@
+D:\Projects\VDN New\SubSonic\bin\Debug\SubSonic.XML
+D:\Projects\VDN New\SubSonic\bin\Debug\SubSonic.dll
+D:\Projects\VDN New\SubSonic\bin\Debug\SubSonic.pdb
+D:\Projects\VDN New\SubSonic\obj\Debug\SubSonic.dll
+D:\Projects\VDN New\SubSonic\obj\Debug\SubSonic.pdb
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\bin\Debug\SubSonic.XML
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\bin\Debug\SubSonic.dll
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\bin\Debug\SubSonic.pdb
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\obj\Debug\SubSonic.dll
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\obj\Debug\SubSonic.pdb
+D:\Projects\CoffeeShop\CoffeeShop\SubSonic\obj\Debug\SubSonic.csprojResolveAssemblyReference.cache
+D:\Work\Projects\BanhBanh\SubSonic\bin\Debug\SubSonic.XML
+D:\Work\Projects\BanhBanh\SubSonic\bin\Debug\SubSonic.dll
+D:\Work\Projects\BanhBanh\SubSonic\bin\Debug\SubSonic.pdb
+D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.csprojAssemblyReference.cache
+D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.csproj.CoreCompileInputs.cache
+D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.dll
+D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.pdb

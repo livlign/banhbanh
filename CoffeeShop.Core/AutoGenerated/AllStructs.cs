@@ -23,6 +23,8 @@ namespace Subsonic2
         
 		public static string District = @"tblDistricts";
         
+		public static string Ingredient = @"tblIngredients";
+        
 		public static string MenuItem = @"tblMenuItems";
         
 		public static string MenuPosition = @"tblMenuPosition";
@@ -66,6 +68,10 @@ namespace Subsonic2
         
 		public static TableSchema.Table District{
             get { return DataService.GetSchema("tblDistricts","LocalProvider"); }
+		}
+        
+		public static TableSchema.Table Ingredient{
+            get { return DataService.GetSchema("tblIngredients","LocalProvider"); }
 		}
         
 		public static TableSchema.Table MenuItem{

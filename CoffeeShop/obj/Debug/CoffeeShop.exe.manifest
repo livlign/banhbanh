@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="14310912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="14308864">
       <assemblyIdentity name="CoffeeShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8xYQTY5zyhCBx5zZCxdjWR7UVFyZ3eU04hB5/Ou1Sl0=</dsig:DigestValue>
+        <dsig:DigestValue>/yquW6aNs+L59sj+frBua6Nkq69plKZEz/xd5FUvKa8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.Core.dll" size="119808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.Core.dll" size="125440">
       <assemblyIdentity name="CoffeeShop.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R/HKfO73mpscul/9wbPjdBxGJOpGEmwUwUwqHiG7d9o=</dsig:DigestValue>
+        <dsig:DigestValue>F7sZlJJzQ9o3N7DXDjDnB68EdYgf25tNjcmoTpWZWEQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,13 +90,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CoffeeShop.exe.config" size="1066">
+  <file name="CoffeeShop.exe.config" size="1061">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yMISOg9r176TVgm5d3BzkX/PIWJNc4Sik+G9K2ouF1Y=</dsig:DigestValue>
+      <dsig:DigestValue>FfP5/w+8XsLZBkpufsfGtWr5wRHugTBRASl8GccaFjw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="icon.ico" size="370070">

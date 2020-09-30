@@ -25,9 +25,9 @@ namespace CoffeeShop.Control
         Product _selectedProduct;
         List<Product> listProduct;
 
-        bool isEditVoucher = false;
-        Voucher _selectedVoucher;
-        List<Voucher> listVoucher;
+        bool isEditIngredient = false;
+        Ingredient _selectedIngredient;
+        List<Ingredient> listIngredient;
 
         public Customer selectedCustomer
         {
@@ -89,23 +89,23 @@ namespace CoffeeShop.Control
             }
         }
 
-        public Voucher selectedVoucher
+        public Ingredient selectedIngredient
         {
             get
             {
-                if (_selectedVoucher == null)
+                if (_selectedIngredient == null)
                 {
-                    if (dgvVoucher.SelectedRows.Count > 0)
+                    if (dgvIngredient.SelectedRows.Count > 0)
                     {
-                        _selectedVoucher = dgvVoucher.SelectedRows[0].DataBoundItem as Voucher;
+                        _selectedIngredient = dgvIngredient.SelectedRows[0].DataBoundItem as Ingredient;
                     }
                 }
 
-                return _selectedVoucher;
+                return _selectedIngredient;
             }
             set
             {
-                _selectedVoucher = value;
+                _selectedIngredient = value;
             }
         }
 
@@ -135,9 +135,9 @@ namespace CoffeeShop.Control
             ProductButton(false);
 
             //voucher
-            dgvVoucher.AutoGenerateColumns = false;
-            VoucherLoadData();
-            VoucherButton(false);            
+            dgvIngredient.AutoGenerateColumns = false;
+            IngredientLoadData();
+            IngredientButton(false);            
         }
 
         #region Customer
@@ -520,35 +520,102 @@ namespace CoffeeShop.Control
 
         #endregion
 
-        #region Voucher
-        private void VoucherLoadData()
+        #region Ingredient
+        private void IngredientLoadData()
         {
-            listVoucher = new VoucherCollection().Load().OrderByDescending(c=>c.DateCreated).OrderByDescending(c=>c.Active).ToList();
-            dgvVoucher.DataSource = listVoucher;
+            listIngredient = new IngredientCollection().Load().OrderByDescending(c=>c.Active).ToList();
+            dgvIngredient.DataSource = listIngredient;
         }
-        private void VoucherButton(bool IsEdit)
+        private void IngredientButton(bool IsEdit)
         {
-            pnlVoucher.Enabled = IsEdit;
-            btnVoucherAdd.Visible = !IsEdit;
-            btnVoucherEdit.Visible = !IsEdit;
-            btnVoucherSave.Visible = IsEdit;
-            btnVoucherCancel.Visible = IsEdit;
-            dgvVoucher.Enabled = !isEdit;
+            pnlIngredient.Enabled = IsEdit;
+            btnIngredientAdd.Visible = !IsEdit;
+            btnIngredientEdit.Visible = !IsEdit;
+            btnIngredientSave.Visible = IsEdit;
+            btnIngredientCancel.Visible = IsEdit;
+            dgvIngredient.Enabled = !isEdit;
         }
 
-        private void VoucherResetText()
+        private void IngredientResetText()
         {
-            txtVoucherCode.Text = "";
-            txtVoucherValue.Text = "";
-            cmbVoucherType.SelectedIndex = 0;
-            dtpVoucherDateActive.Value = DateTime.Now;
-            dtpVoucherDateActive.Checked = false;
-            dtpVoucherDateExpire.Value = DateTime.Now;
-            dtpVoucherDateExpire.Checked = false;
-            chkVoucherActive.Checked = true;
-            txtVoucherCode.Focus();
+            txtIngredientName.Text = "";
+            txtIngredientPrice.Text = "";
+            txtIngredientUnit.Text = "";
+            chkIngredientActive.Checked = true;
+            txtIngredientName.Focus();
         }
-        private void txtVoucherValue_TextChanged(object sender, EventArgs e)
+
+        private void dgvIngredient_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvIngredient.SelectedRows.Count > 0)
+            {
+                selectedIngredient = dgvIngredient.SelectedRows[0].DataBoundItem as Ingredient;
+
+                txtIngredientName.Text = selectedIngredient.Name;
+                txtIngredientPrice.Text = string.Format("{0:N0}", selectedIngredient.Price);
+                txtIngredientUnit.Text = selectedIngredient.Unit;
+                chkIngredientActive.Checked = (bool)selectedIngredient.Active;
+            }
+        }
+
+        private void btnIngredientSave_Click(object sender, EventArgs e)
+        {
+            if (txtIngredientName.Text == "")
+            {
+                MessageBox.Show("Tên nguyên liệu không hợp lệ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var ingredient = new Ingredient();
+            if (isEditIngredient)
+            {
+                ingredient = selectedIngredient;
+            }
+            ingredient.Name = txtIngredientName.Text;
+            ingredient.Price = txtIngredientPrice.Text == "" ? 0 : decimal.Parse(txtIngredientPrice.Text);
+            ingredient.Unit = txtIngredientUnit.Text;
+            ingredient.Active = chkIngredientActive.Checked;
+            ingredient.Save();
+            IngredientLoadData();
+
+            if (MessageBox.Show("Thêm nguyên liệu thành công, bạn có muốn thêm nữa ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                IngredientResetText();
+            }
+            else
+            {
+                IngredientResetText();
+                IngredientButton(false);
+            }
+        }
+
+        private void btnIngredientEdit_Click(object sender, EventArgs e)
+        {
+            if (selectedIngredient == null)
+            {
+                MessageBox.Show("Chưa chọn nguyên liệu để sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            IngredientButton(true);
+            isEditIngredient = true;
+        }
+
+        private void btnIngredientCancel_Click(object sender, EventArgs e)
+        {
+            IngredientButton(false);
+            IngredientResetText();
+        }
+
+        private void btnIngredientAdd_Click(object sender, EventArgs e)
+        {
+            IngredientButton(true);
+            txtIngredientName.Focus();
+            chkIngredientActive.Checked = true;
+            isEditIngredient = false;
+            IngredientResetText();
+        }
+
+        private void txtIngredientPrice_TextChanged(object sender, EventArgs e)
         {
             Utilities.FormatMoney(sender);
         }
@@ -558,128 +625,5 @@ namespace CoffeeShop.Control
         {
             Utilities.HandlerIntTextbox(e);
         }
-
-        private void dgvVoucher_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvVoucher.SelectedRows.Count > 0)
-            {
-                selectedVoucher = dgvVoucher.SelectedRows[0].DataBoundItem as Voucher;
-
-                txtVoucherCode.Text = selectedVoucher.VoucherCode;
-                txtVoucherValue.Text = string.Format("{0:N0}", selectedVoucher.ValueX);
-                cmbVoucherType.SelectedIndex = (int)selectedVoucher.Type;
-                if (selectedVoucher.DateActive != null && selectedVoucher.DateActive >= new DateTime(2016,1,1))
-                {
-                    dtpVoucherDateActive.Checked = true;
-                    dtpVoucherDateActive.Value = selectedVoucher.DateActive.Value;
-                }
-                if (selectedVoucher.DateExpire != null && selectedVoucher.DateExpire >= new DateTime(2017, 1, 1))
-                {
-                    dtpVoucherDateExpire.Checked = true;
-                    dtpVoucherDateExpire.Value = selectedVoucher.DateExpire.Value;
-                }
-                chkVoucherActive.Checked = (bool)selectedVoucher.Active;
-            }
-        }
-
-        private void btnVoucherAdd_Click(object sender, EventArgs e)
-        {
-            VoucherButton(true);
-            txtVoucherCode.Focus();
-            chkVoucherActive.Checked = true;
-            isEditVoucher = false;
-            VoucherResetText();
-        }
-
-        private void btnVoucherCancel_Click(object sender, EventArgs e)
-        {
-            VoucherButton(false);
-            VoucherResetText();
-        }
-
-        private void btnVoucherSave_Click(object sender, EventArgs e)
-        {
-            if (txtVoucherCode.Text == "")
-            {
-                MessageBox.Show("Mã giảm giá không hợp lệ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtVoucherCode.Focus();
-                return;
-            }
-            
-            if (txtVoucherValue.Text == "")
-            {
-                MessageBox.Show("Giá trị không hợp lệ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtVoucherValue.Focus();
-                return;
-            }
-
-            var p = new Voucher();
-            var needCheckCode = true;
-            if (isEditVoucher)
-            {
-                p = selectedVoucher;
-                needCheckCode = false;
-
-                if (txtVoucherCode.Text != p.VoucherCode)
-                    needCheckCode = true;
-            }
-            
-            if(needCheckCode)
-            {
-                var voucher = new Voucher(Voucher.Columns.VoucherCode, txtVoucherCode.Text);
-                if (voucher != null && voucher.Id > 0)
-                {
-                    MessageBox.Show("Mã giảm giá này đã tồn tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtProductCode.Focus();
-                    return;
-                }
-            }
-
-            p.VoucherCode = txtVoucherCode.Text;
-            p.ValueX = decimal.Parse(txtVoucherValue.Text);
-            p.Type = cmbVoucherType.SelectedIndex;
-            if (dtpVoucherDateActive.Checked)
-                p.DateActive = dtpVoucherDateActive.Value;
-            else
-                p.DateActive = new DateTime(2016,1,1);
-
-            if (dtpVoucherDateExpire.Checked)
-                p.DateExpire = dtpVoucherDateExpire.Value;
-            else
-                p.DateExpire = new DateTime(2099, 1, 1);
-
-            p.Active = chkVoucherActive.Checked;
-            
-            if (!isEditVoucher)
-                p.DateCreated = DateTime.Now;
-
-            p.Save();
-            VoucherLoadData();
-
-            if (MessageBox.Show("Thêm mã giảm giá thành công, bạn có muốn thêm nữa ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                VoucherResetText();
-            }
-            else
-            {
-                VoucherResetText();
-                VoucherButton(false);
-            }
-        }
-
-        private void btnVoucherEdit_Click(object sender, EventArgs e)
-        {
-            if (selectedVoucher == null)
-            {
-                MessageBox.Show("Chưa chọn mã giảm giá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            VoucherButton(true);
-            isEditVoucher = true;
-        }
-
-        
-
-
     }
 }

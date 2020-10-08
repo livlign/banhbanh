@@ -18,6 +18,9 @@ namespace CoffeeShop.Control
         List<Product> ListProduct;
         List<TempOrderItem> ListTempItem;
 
+        Customer selectedCustomer;
+        decimal TotalValue = 0;
+
         public OrderControl()
         {
             InitializeComponent();
@@ -38,10 +41,9 @@ namespace CoffeeShop.Control
 
             txtOrderNote.Text = Utilities.orderNote == null ? "" : Utilities.orderNote.Note;
 
-            if (txtOrderNumber.Text == "")
-            {
-                DialogOrderNumber();
-            }
+            var ListCustomer = new CustomerCollection().Where(Customer.Columns.Active, true).Load().OrderBy(c=>c.Name).ToList();
+            dgvCustomer.AutoGenerateColumns = false;
+            dgvCustomer.DataSource = ListCustomer;
         }
 
         public void DialogOrderNumber()
@@ -50,7 +52,7 @@ namespace CoffeeShop.Control
             frm.ShowDialog();
             if (frm.DialogResult == DialogResult.OK)
             {
-                txtOrderNumber.Text = frm.ordernumber;
+                //txtOrderNumber.Text = frm.ordernumber;
                 cmbSearch.Focus();
             }
             else
@@ -108,23 +110,53 @@ namespace CoffeeShop.Control
         }
 
         private void btnUserSave_Click(object sender, EventArgs e)
-        {
-            if (txtOrderNumber.Text == "")
-            {
-                MessageBox.Show("Chưa nhập số bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtOrderNumber.Focus();
-                return;
-            }
+        {            
             if (ListTempItem.Count <= 0)
             {                
                 //MessageBox.Show("Chưa chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
-            ConfirmOrder c = new ConfirmOrder(txtOrderNumber.Text,txtNote.Text,ListTempItem);
+            if (selectedCustomer == null || selectedCustomer.Id <= 0)
+            {
+                MessageBox.Show("Chưa chọn khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            if (c.ShowDialog() == DialogResult.OK)
+            //ConfirmOrder c = new ConfirmOrder("",txtNote.Text,ListTempItem);
+
+            //if (c.ShowDialog() == DialogResult.OK)
+            //    ResetAllText();
+
+            if (MessageBox.Show("Xác nhận tạo hóa đơn này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Order o = new Order();
+                var count = new OrderCollection().Where(Order.Columns.DateCreated, SubSonic.Comparison.GreaterOrEquals, DateTime.Now.Date).Load().Count();
+                o.OrderRef = DateTime.Now.ToString("yyMMdd") + string.Format("{0:0000}", count + 1);
+                o.CustomerID = selectedCustomer.Id;
+                o.ValueX = ListTempItem.Sum(c => c.TotalPrice);
+                o.TotalValue = TotalValue;
+                o.DateCreated = DateTime.Now;
+                o.UserId = Utilities.CurrentUser == null ? 1 : Utilities.CurrentUser.Id;
+                o.StatusId = 1;
+                o.Note = txtNote.Text;
+                o.ShipCost = txtShipCost.Text == "" ? 0 : decimal.Parse(txtShipCost.Text);
+                o.ShipDate = txtShipDate.Value;
+                o.Save();
+
+                //OrderItem
+                foreach (var item in ListTempItem)
+                {
+                    OrderItem oi = new OrderItem();
+                    oi.OrderId = o.Id;
+                    oi.ProductId = item.ProductId;
+                    oi.Qty = item.Qty;
+                    oi.Price = item.Price;
+                    oi.Cost = item.Cost;
+                    oi.Save();
+                }
+
                 ResetAllText();
+            }
         }
 
         private void cmbSearch_KeyUp(object sender, KeyEventArgs e)
@@ -146,8 +178,16 @@ namespace CoffeeShop.Control
             dgvOrderItem.Refresh();
 
             dgvOrderItem.DataSource = ListTempItem;
-            
-            lblTotal.Text = ListTempItem == null ? "" : ListTempItem.Sum(c => c.TotalPrice).ToString("N0");
+
+            CalculateTotalPrice();
+        }
+
+        private void CalculateTotalPrice()
+        {
+            TotalValue = ListTempItem == null ? 0 : ListTempItem.Sum(c => c.TotalPrice);
+            TotalValue += txtShipCost.Text == "" ? 0 : decimal.Parse(txtShipCost.Text);
+
+            lblTotal.Text = TotalValue.ToString("N0");
         }
 
         private void dgvOrderItem_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -167,8 +207,8 @@ namespace CoffeeShop.Control
                 var item = new TempOrderItem();
                 item.ProductName = product.ProductName;
                 item.ProductId = product.Id;
-                item.Price = (decimal)product.Price;
-                item.Cost = (decimal)product.Cost;
+                item.Price = product.Price ?? 0;
+                item.Cost = product.Cost ?? 0;
                 item.Qty = 1;
                 ListTempItem.Add(item);
             }
@@ -201,13 +241,14 @@ namespace CoffeeShop.Control
         private void ResetAllText()
         {
             ListTempItem.Clear();
-            txtOrderNumber.Text = "";
             txtNote.Text = "";
             lblTotal.Text = "";
+            txtShipCost.Text = "";
+            txtShipDate.Value = DateTime.Now;
+            TotalValue = 0;
             LoadItem();
-            txtOrderNumber.Focus();
 
-            DialogOrderNumber();
+            //DialogOrderNumber();
         }
 
         private void txtOrderNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -218,6 +259,21 @@ namespace CoffeeShop.Control
         private void OrderControl_Load(object sender, EventArgs e)
         {
             cmbSearch.Focus();
+        }
+
+        private void dgvCustomer_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvCustomer.SelectedRows.Count > 0)
+            {
+                selectedCustomer = dgvCustomer.SelectedRows[0].DataBoundItem as Customer;
+            }
+        }
+
+        private void txtShipCost_TextChanged(object sender, EventArgs e)
+        {
+            Utilities.FormatMoney(sender);
+
+            CalculateTotalPrice();
         }
     }
 }

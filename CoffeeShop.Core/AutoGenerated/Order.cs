@@ -164,6 +164,19 @@ namespace Subsonic2
 				colvarOrderNumber.ForeignKeyTableName = "";
 				schema.Columns.Add(colvarOrderNumber);
 				
+				TableSchema.TableColumn colvarCustomerID = new TableSchema.TableColumn(schema);
+				colvarCustomerID.ColumnName = "CustomerID";
+				colvarCustomerID.DataType = DbType.Int32;
+				colvarCustomerID.MaxLength = 0;
+				colvarCustomerID.AutoIncrement = false;
+				colvarCustomerID.IsNullable = true;
+				colvarCustomerID.IsPrimaryKey = false;
+				colvarCustomerID.IsForeignKey = false;
+				colvarCustomerID.IsReadOnly = false;
+				colvarCustomerID.DefaultSetting = @"";
+				colvarCustomerID.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarCustomerID);
+				
 				TableSchema.TableColumn colvarValueX = new TableSchema.TableColumn(schema);
 				colvarValueX.ColumnName = "Value";
 				colvarValueX.DataType = DbType.Decimal;
@@ -320,6 +333,32 @@ namespace Subsonic2
 				colvarNote.ForeignKeyTableName = "";
 				schema.Columns.Add(colvarNote);
 				
+				TableSchema.TableColumn colvarShipCost = new TableSchema.TableColumn(schema);
+				colvarShipCost.ColumnName = "ShipCost";
+				colvarShipCost.DataType = DbType.Decimal;
+				colvarShipCost.MaxLength = 0;
+				colvarShipCost.AutoIncrement = false;
+				colvarShipCost.IsNullable = true;
+				colvarShipCost.IsPrimaryKey = false;
+				colvarShipCost.IsForeignKey = false;
+				colvarShipCost.IsReadOnly = false;
+				colvarShipCost.DefaultSetting = @"";
+				colvarShipCost.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarShipCost);
+				
+				TableSchema.TableColumn colvarShipDate = new TableSchema.TableColumn(schema);
+				colvarShipDate.ColumnName = "ShipDate";
+				colvarShipDate.DataType = DbType.DateTime;
+				colvarShipDate.MaxLength = 0;
+				colvarShipDate.AutoIncrement = false;
+				colvarShipDate.IsNullable = true;
+				colvarShipDate.IsPrimaryKey = false;
+				colvarShipDate.IsForeignKey = false;
+				colvarShipDate.IsReadOnly = false;
+				colvarShipDate.DefaultSetting = @"";
+				colvarShipDate.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarShipDate);
+				
 				BaseSchema = schema;
 				//add this schema to the provider
 				//so we can query it later
@@ -352,6 +391,14 @@ namespace Subsonic2
 		{
 			get { return GetColumnValue<string>(Columns.OrderNumber); }
 			set { SetColumnValue(Columns.OrderNumber, value); }
+		}
+		  
+		[XmlAttribute("CustomerID")]
+		[Bindable(true)]
+		public int? CustomerID 
+		{
+			get { return GetColumnValue<int?>(Columns.CustomerID); }
+			set { SetColumnValue(Columns.CustomerID, value); }
 		}
 		  
 		[XmlAttribute("ValueX")]
@@ -449,6 +496,22 @@ namespace Subsonic2
 			get { return GetColumnValue<string>(Columns.Note); }
 			set { SetColumnValue(Columns.Note, value); }
 		}
+		  
+		[XmlAttribute("ShipCost")]
+		[Bindable(true)]
+		public decimal? ShipCost 
+		{
+			get { return GetColumnValue<decimal?>(Columns.ShipCost); }
+			set { SetColumnValue(Columns.ShipCost, value); }
+		}
+		  
+		[XmlAttribute("ShipDate")]
+		[Bindable(true)]
+		public DateTime? ShipDate 
+		{
+			get { return GetColumnValue<DateTime?>(Columns.ShipDate); }
+			set { SetColumnValue(Columns.ShipDate, value); }
+		}
 		
 		#endregion
 		
@@ -469,13 +532,15 @@ namespace Subsonic2
 		/// <summary>
 		/// Inserts a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Insert(string varOrderRef,string varOrderNumber,decimal? varValueX,decimal? varDiscount,int? varDiscountType,decimal? varAddonDiscount,decimal? varTotalCost,decimal? varTotalValue,string varVoucherCode,DateTime? varDateCreated,int? varUserId,int? varStatusId,int? varPromoId,string varNote)
+		public static void Insert(string varOrderRef,string varOrderNumber,int? varCustomerID,decimal? varValueX,decimal? varDiscount,int? varDiscountType,decimal? varAddonDiscount,decimal? varTotalCost,decimal? varTotalValue,string varVoucherCode,DateTime? varDateCreated,int? varUserId,int? varStatusId,int? varPromoId,string varNote,decimal? varShipCost,DateTime? varShipDate)
 		{
 			Order item = new Order();
 			
 			item.OrderRef = varOrderRef;
 			
 			item.OrderNumber = varOrderNumber;
+			
+			item.CustomerID = varCustomerID;
 			
 			item.ValueX = varValueX;
 			
@@ -501,6 +566,10 @@ namespace Subsonic2
 			
 			item.Note = varNote;
 			
+			item.ShipCost = varShipCost;
+			
+			item.ShipDate = varShipDate;
+			
 		
 			if (System.Web.HttpContext.Current != null)
 				item.Save(System.Web.HttpContext.Current.User.Identity.Name);
@@ -511,7 +580,7 @@ namespace Subsonic2
 		/// <summary>
 		/// Updates a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Update(int varId,string varOrderRef,string varOrderNumber,decimal? varValueX,decimal? varDiscount,int? varDiscountType,decimal? varAddonDiscount,decimal? varTotalCost,decimal? varTotalValue,string varVoucherCode,DateTime? varDateCreated,int? varUserId,int? varStatusId,int? varPromoId,string varNote)
+		public static void Update(int varId,string varOrderRef,string varOrderNumber,int? varCustomerID,decimal? varValueX,decimal? varDiscount,int? varDiscountType,decimal? varAddonDiscount,decimal? varTotalCost,decimal? varTotalValue,string varVoucherCode,DateTime? varDateCreated,int? varUserId,int? varStatusId,int? varPromoId,string varNote,decimal? varShipCost,DateTime? varShipDate)
 		{
 			Order item = new Order();
 			
@@ -520,6 +589,8 @@ namespace Subsonic2
 				item.OrderRef = varOrderRef;
 			
 				item.OrderNumber = varOrderNumber;
+			
+				item.CustomerID = varCustomerID;
 			
 				item.ValueX = varValueX;
 			
@@ -544,6 +615,10 @@ namespace Subsonic2
 				item.PromoId = varPromoId;
 			
 				item.Note = varNote;
+			
+				item.ShipCost = varShipCost;
+			
+				item.ShipDate = varShipDate;
 			
 			item.IsNew = false;
 			if (System.Web.HttpContext.Current != null)
@@ -579,86 +654,107 @@ namespace Subsonic2
         
         
         
-        public static TableSchema.TableColumn ValueXColumn
+        public static TableSchema.TableColumn CustomerIDColumn
         {
             get { return Schema.Columns[3]; }
         }
         
         
         
-        public static TableSchema.TableColumn DiscountColumn
+        public static TableSchema.TableColumn ValueXColumn
         {
             get { return Schema.Columns[4]; }
         }
         
         
         
-        public static TableSchema.TableColumn DiscountTypeColumn
+        public static TableSchema.TableColumn DiscountColumn
         {
             get { return Schema.Columns[5]; }
         }
         
         
         
-        public static TableSchema.TableColumn AddonDiscountColumn
+        public static TableSchema.TableColumn DiscountTypeColumn
         {
             get { return Schema.Columns[6]; }
         }
         
         
         
-        public static TableSchema.TableColumn TotalCostColumn
+        public static TableSchema.TableColumn AddonDiscountColumn
         {
             get { return Schema.Columns[7]; }
         }
         
         
         
-        public static TableSchema.TableColumn TotalValueColumn
+        public static TableSchema.TableColumn TotalCostColumn
         {
             get { return Schema.Columns[8]; }
         }
         
         
         
-        public static TableSchema.TableColumn VoucherCodeColumn
+        public static TableSchema.TableColumn TotalValueColumn
         {
             get { return Schema.Columns[9]; }
         }
         
         
         
-        public static TableSchema.TableColumn DateCreatedColumn
+        public static TableSchema.TableColumn VoucherCodeColumn
         {
             get { return Schema.Columns[10]; }
         }
         
         
         
-        public static TableSchema.TableColumn UserIdColumn
+        public static TableSchema.TableColumn DateCreatedColumn
         {
             get { return Schema.Columns[11]; }
         }
         
         
         
-        public static TableSchema.TableColumn StatusIdColumn
+        public static TableSchema.TableColumn UserIdColumn
         {
             get { return Schema.Columns[12]; }
         }
         
         
         
-        public static TableSchema.TableColumn PromoIdColumn
+        public static TableSchema.TableColumn StatusIdColumn
         {
             get { return Schema.Columns[13]; }
         }
         
         
         
-        public static TableSchema.TableColumn NoteColumn
+        public static TableSchema.TableColumn PromoIdColumn
         {
             get { return Schema.Columns[14]; }
+        }
+        
+        
+        
+        public static TableSchema.TableColumn NoteColumn
+        {
+            get { return Schema.Columns[15]; }
+        }
+        
+        
+        
+        public static TableSchema.TableColumn ShipCostColumn
+        {
+            get { return Schema.Columns[16]; }
+        }
+        
+        
+        
+        public static TableSchema.TableColumn ShipDateColumn
+        {
+            get { return Schema.Columns[17]; }
         }
         
         
@@ -670,6 +766,7 @@ namespace Subsonic2
 			 public static string Id = @"Id";
 			 public static string OrderRef = @"OrderRef";
 			 public static string OrderNumber = @"OrderNumber";
+			 public static string CustomerID = @"CustomerID";
 			 public static string ValueX = @"Value";
 			 public static string Discount = @"Discount";
 			 public static string DiscountType = @"DiscountType";
@@ -682,6 +779,8 @@ namespace Subsonic2
 			 public static string StatusId = @"StatusId";
 			 public static string PromoId = @"PromoId";
 			 public static string Note = @"Note";
+			 public static string ShipCost = @"ShipCost";
+			 public static string ShipDate = @"ShipDate";
 						
 		}
 		#endregion

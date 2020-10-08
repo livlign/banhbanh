@@ -79,13 +79,15 @@ namespace Subsonic2
 	    /// Inserts a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Insert, true)]
-	    public void Insert(string OrderRef,string OrderNumber,decimal? ValueX,decimal? Discount,int? DiscountType,decimal? AddonDiscount,decimal? TotalCost,decimal? TotalValue,string VoucherCode,DateTime? DateCreated,int? UserId,int? StatusId,int? PromoId,string Note)
+	    public void Insert(string OrderRef,string OrderNumber,int? CustomerID,decimal? ValueX,decimal? Discount,int? DiscountType,decimal? AddonDiscount,decimal? TotalCost,decimal? TotalValue,string VoucherCode,DateTime? DateCreated,int? UserId,int? StatusId,int? PromoId,string Note,decimal? ShipCost,DateTime? ShipDate)
 	    {
 		    Order item = new Order();
 		    
             item.OrderRef = OrderRef;
             
             item.OrderNumber = OrderNumber;
+            
+            item.CustomerID = CustomerID;
             
             item.ValueX = ValueX;
             
@@ -111,6 +113,10 @@ namespace Subsonic2
             
             item.Note = Note;
             
+            item.ShipCost = ShipCost;
+            
+            item.ShipDate = ShipDate;
+            
 	    
 		    item.Save(UserName);
 	    }
@@ -119,7 +125,7 @@ namespace Subsonic2
 	    /// Updates a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Update, true)]
-	    public void Update(int Id,string OrderRef,string OrderNumber,decimal? ValueX,decimal? Discount,int? DiscountType,decimal? AddonDiscount,decimal? TotalCost,decimal? TotalValue,string VoucherCode,DateTime? DateCreated,int? UserId,int? StatusId,int? PromoId,string Note)
+	    public void Update(int Id,string OrderRef,string OrderNumber,int? CustomerID,decimal? ValueX,decimal? Discount,int? DiscountType,decimal? AddonDiscount,decimal? TotalCost,decimal? TotalValue,string VoucherCode,DateTime? DateCreated,int? UserId,int? StatusId,int? PromoId,string Note,decimal? ShipCost,DateTime? ShipDate)
 	    {
 		    Order item = new Order();
 	        item.MarkOld();
@@ -130,6 +136,8 @@ namespace Subsonic2
 			item.OrderRef = OrderRef;
 				
 			item.OrderNumber = OrderNumber;
+				
+			item.CustomerID = CustomerID;
 				
 			item.ValueX = ValueX;
 				
@@ -154,6 +162,10 @@ namespace Subsonic2
 			item.PromoId = PromoId;
 				
 			item.Note = Note;
+				
+			item.ShipCost = ShipCost;
+				
+			item.ShipDate = ShipDate;
 				
 	        item.Save(UserName);
 	    }

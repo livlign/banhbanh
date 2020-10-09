@@ -30,6 +30,7 @@ namespace CoffeeShop.Control
         {
             InitializeComponent();
 
+            //Report sale by date
             dgvSaleReport_Order.AutoGenerateColumns = false;
             dgvSaleReport_Item.AutoGenerateColumns = false;
             dgvSaleReport_Date.AutoGenerateColumns = false;
@@ -43,7 +44,7 @@ namespace CoffeeShop.Control
             dtpVoucherReportFrom.Value = DateTime.Now.AddYears(-1);
             dtpVoucherReportTo.Value = DateTime.Now;
 
-            //Report product
+            //Report sale by product
             var listcategory = new CategoryCollection().Where(Category.Columns.Active, true).Load().ToList();
             var c = new Category();
             c.Id = 0;
@@ -53,6 +54,11 @@ namespace CoffeeShop.Control
             cmbProductReportCategory.DisplayMember = "Name";
             cmbProductReportCategory.ValueMember = "Id";
             cmbProductReportCategory.SelectedIndex = 0;
+
+            dgvReportProduct.AutoGenerateColumns = false;
+            dgvReportProductDate.AutoGenerateColumns = false;
+            dtpProductReportFrom.Value = DateTime.Now.AddMonths(-1);
+            dtpProductReportTo.Value = DateTime.Now;
         }
 
         private void btnSaleReport_Search_Click(object sender, EventArgs e)
@@ -238,19 +244,20 @@ namespace CoffeeShop.Control
         {
             var dt = e.Result as DataTable;
 
+            decimal sumProductValue = 0;
+            decimal sumShip= 0;
             decimal sumTotal = 0;
-            decimal sumCost = 0;
-               
+
             if (dt.Rows.Count > 0)
             {
+                sumProductValue = decimal.Parse(dt.Compute("Sum(TotalProductValue)", "").ToString());
+                sumShip = decimal.Parse(dt.Compute("Sum(TotalShip)", "").ToString());
                 sumTotal = decimal.Parse(dt.Compute("Sum(Total)", "").ToString());
-                sumCost = decimal.Parse(dt.Compute("Sum(TotalCost)", "").ToString());
             }
-            var sumRevenue = sumTotal - sumCost;
 
-            lblTotalSold.Text = "Tổng tiền: " + sumTotal.ToString("N0");
-            lblTotalCost.Text = "Tổng nhập: " + sumCost.ToString("N0");
-            lblTotalRevenue.Text = "Tổng doanh thu: " + sumRevenue.ToString("N0");
+            lblTotalSold.Text = "Tiền hàng: " + sumProductValue.ToString("N0");
+            lblTotalShip.Text = "Tiền ship: " + sumShip.ToString("N0");
+            lblTotalRevenue.Text = "Tổng doanh thu: " + sumTotal.ToString("N0");
 
             btnSaleReport_Search.Visible = true;
             pbSaleReport.Visible = false;

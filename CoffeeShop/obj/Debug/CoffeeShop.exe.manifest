@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="14311424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="14312448">
       <assemblyIdentity name="CoffeeShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wL29Z5dqiS6U5eukoehOvSSV8qdnetg4aRoq8XOrVBs=</dsig:DigestValue>
+        <dsig:DigestValue>Jcq0h3CLkFPscwU3SIw7+/LgD0508DZy2XWF32rFkMo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

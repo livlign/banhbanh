@@ -43,6 +43,36 @@ namespace Subsonic2{
         }
         
         /// <summary>
+        /// Creates an object wrapper for the spSaleReportByCustomer Procedure
+        /// </summary>
+        public static StoredProcedure SpSaleReportByCustomer(DateTime? fromDate, DateTime? toDate)
+        {
+            SubSonic.StoredProcedure sp = new SubSonic.StoredProcedure("spSaleReportByCustomer", DataService.GetInstance("LocalProvider"), "dbo");
+        	
+            sp.Command.AddParameter("@fromDate", fromDate, DbType.DateTime, null, null);
+        	
+            sp.Command.AddParameter("@toDate", toDate, DbType.DateTime, null, null);
+        	
+            return sp;
+        }
+        
+        /// <summary>
+        /// Creates an object wrapper for the spSaleReportByCustomer_Order Procedure
+        /// </summary>
+        public static StoredProcedure SpSaleReportByCustomerOrder(DateTime? fromDate, DateTime? toDate, int? customerId)
+        {
+            SubSonic.StoredProcedure sp = new SubSonic.StoredProcedure("spSaleReportByCustomer_Order", DataService.GetInstance("LocalProvider"), "dbo");
+        	
+            sp.Command.AddParameter("@fromDate", fromDate, DbType.DateTime, null, null);
+        	
+            sp.Command.AddParameter("@toDate", toDate, DbType.DateTime, null, null);
+        	
+            sp.Command.AddParameter("@customerId", customerId, DbType.Int32, 0, 10);
+        	
+            return sp;
+        }
+        
+        /// <summary>
         /// Creates an object wrapper for the spSaleReportByDate Procedure
         /// </summary>
         public static StoredProcedure SpSaleReportByDate(DateTime? fromDate, DateTime? toDate)

@@ -34,15 +34,10 @@ namespace CoffeeShop.Control
             dgvSaleReport_Order.AutoGenerateColumns = false;
             dgvSaleReport_Item.AutoGenerateColumns = false;
             dgvSaleReport_Date.AutoGenerateColumns = false;
-            dtpSaleReport_FromDate.Value = DateTime.Now.AddMonths(-1);
+            dtpSaleReport_FromDate.Value = DateTime.Now.AddYears(-1);
             dtpSaleReport_ToDate.Value = DateTime.Now;
 
-            dgvSaleReport_Order.ContextMenuStrip = cmsOrder;
-
-            dgvVoucherReport_Stat.AutoGenerateColumns = false;
-            dgvVoucherReport_Value.AutoGenerateColumns = false;
-            dtpVoucherReportFrom.Value = DateTime.Now.AddYears(-1);
-            dtpVoucherReportTo.Value = DateTime.Now;
+            dgvSaleReport_Order.ContextMenuStrip = cmsOrder;            
 
             //Report sale by product
             var listcategory = new CategoryCollection().Where(Category.Columns.Active, true).Load().ToList();
@@ -57,8 +52,15 @@ namespace CoffeeShop.Control
 
             dgvReportProduct.AutoGenerateColumns = false;
             dgvReportProductDate.AutoGenerateColumns = false;
-            dtpProductReportFrom.Value = DateTime.Now.AddMonths(-1);
+            dtpProductReportFrom.Value = DateTime.Now.AddYears(-1);
             dtpProductReportTo.Value = DateTime.Now;
+
+            //Report sale by customer
+            dgvCustomerReport_Main.AutoGenerateColumns = false;
+            dgvCustomerReport_Order.AutoGenerateColumns = false;
+            dgvCustomerReport_OrderDetail.AutoGenerateColumns = false;
+            dtpCustomerReportFrom.Value = DateTime.Now.AddYears(-1);
+            dtpCustomerReportTo.Value = DateTime.Now;
         }
 
         private void btnSaleReport_Search_Click(object sender, EventArgs e)
@@ -224,15 +226,6 @@ namespace CoffeeShop.Control
             dgvReportProductDate.DataSource = e.Result;
         }
 
-        private void btnVoucherReportSearch_Click(object sender, EventArgs e)
-        {
-            var dtTotal = SPs.SpVoucherTotal(dtpVoucherReportFrom.Value, dtpVoucherReportTo.Value).GetDataSet().Tables[0];
-            var dtStat = SPs.SpVoucherStats(dtpVoucherReportFrom.Value, dtpVoucherReportTo.Value).GetDataSet().Tables[0];
-
-            dgvVoucherReport_Value.DataSource = dtTotal;
-            dgvVoucherReport_Stat.DataSource = dtStat;
-        }
-
         private void bwSaleReport_DoWork(object sender, DoWorkEventArgs e)
         {
             var arg = (ReportSaleArgument)e.Argument;
@@ -263,6 +256,35 @@ namespace CoffeeShop.Control
             pbSaleReport.Visible = false;
 
             dgvSaleReport_Date.DataSource = dt;
+        }
+
+        private void btnCustomerReportSearch_Click(object sender, EventArgs e)
+        {
+            var dtTotal = SPs.SpSaleReportByCustomer(dtpCustomerReportFrom.Value, dtpCustomerReportTo.Value).GetDataSet().Tables[0];
+            dgvCustomerReport_Main.DataSource = dtTotal;
+        }
+
+        private void dgvCustomerReport_Main_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvCustomerReport_Order.DataSource = null;
+            dgvCustomerReport_OrderDetail.DataSource = null;                 
+            if (dgvCustomerReport_Main.SelectedRows.Count > 0)
+            {
+                var cusid = int.Parse(dgvCustomerReport_Main.SelectedRows[0].Cells[0].Value.ToString());
+                var dtOrder = SPs.SpSaleReportByCustomerOrder(dtpCustomerReportFrom.Value, dtpCustomerReportTo.Value, cusid).GetDataSet().Tables[0];
+                dgvCustomerReport_Order.DataSource = dtOrder;
+            }
+        }
+
+        private void dgvCustomerReport_Order_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvCustomerReport_OrderDetail.DataSource = null;
+            if (dgvCustomerReport_Order.SelectedRows.Count > 0)
+            {
+                var orderid = int.Parse(dgvCustomerReport_Order.SelectedRows[0].Cells[0].Value.ToString());
+                var dt = SPs.SpGetOrderItems(orderid).GetDataSet().Tables[0];
+                dgvCustomerReport_OrderDetail.DataSource = dt;
+            }
         }
     }
 }

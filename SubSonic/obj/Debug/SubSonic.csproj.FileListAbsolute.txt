@@ -22,3 +22,4 @@ D:\hehe\Git-banhbanh\SubSonic\bin\Debug\SubSonic.pdb
 D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.csproj.CoreCompileInputs.cache
 D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.dll
 D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.pdb
+D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.csprojAssemblyReference.cache

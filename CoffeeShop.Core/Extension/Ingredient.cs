@@ -17,5 +17,8 @@ namespace Subsonic2
                 return this.Active == true ? "Có" : "Không";
             }
         }
+
+        public int Quantity{get; set;}
+        public decimal Total { get; set; }
     }
 }

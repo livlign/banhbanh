@@ -61,6 +61,7 @@ D:\Work\Projects\BanhBanh\CoffeeShop\bin\Debug\Microsoft.VisualBasic.PowerPacks.
 D:\Work\Projects\BanhBanh\CoffeeShop\obj\Debug\CoffeeShop.exe.manifest
 D:\Work\Projects\BanhBanh\CoffeeShop\obj\Debug\CoffeeShop.application
 D:\Work\Projects\BanhBanh\CoffeeShop\obj\Debug\CoffeeShop.csproj.CopyComplete
+D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\SubSonic.xml
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\CoffeeShop.exe.config
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\CoffeeShop.exe.manifest
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\CoffeeShop.application
@@ -71,8 +72,6 @@ D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\SubSonic.dll
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\CoffeeShop.Core.pdb
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\CoffeeShop.Core.dll.config
 D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\SubSonic.pdb
-D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\SubSonic.xml
-D:\hehe\Git-banhbanh\CoffeeShop\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\hehe\Git-banhbanh\CoffeeShop\obj\Debug\CoffeeShop.csprojAssemblyReference.cache
 D:\hehe\Git-banhbanh\CoffeeShop\obj\Debug\Interop.SHDocVw.dll
 D:\hehe\Git-banhbanh\CoffeeShop\obj\Debug\CoffeeShop.csproj.ResolveComReference.cache

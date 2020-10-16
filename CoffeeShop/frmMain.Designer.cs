@@ -36,10 +36,8 @@
             this.mnSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuMain
@@ -55,7 +53,8 @@
             this.menuMain.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(1136, 56);
+            this.menuMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuMain.Size = new System.Drawing.Size(1515, 56);
             this.menuMain.TabIndex = 1;
             this.menuMain.Text = "menuStrip2";
             // 
@@ -69,7 +68,7 @@
             this.mnHome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnHome.Name = "mnHome";
             this.mnHome.ShortcutKeyDisplayString = "Hệ thống";
-            this.mnHome.Size = new System.Drawing.Size(175, 52);
+            this.mnHome.Size = new System.Drawing.Size(208, 52);
             this.mnHome.Tag = "1";
             this.mnHome.Text = "Trang Chủ";
             this.mnHome.Click += new System.EventHandler(this.mnHome_Click);
@@ -83,7 +82,7 @@
             this.mnOrder.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnOrder.Name = "mnOrder";
             this.mnOrder.ShortcutKeyDisplayString = "Hệ thống";
-            this.mnOrder.Size = new System.Drawing.Size(160, 52);
+            this.mnOrder.Size = new System.Drawing.Size(192, 52);
             this.mnOrder.Tag = "1";
             this.mnOrder.Text = "Hóa Đơn";
             this.mnOrder.Click += new System.EventHandler(this.mnOrder_Click);
@@ -97,7 +96,7 @@
             this.mnList.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnList.Name = "mnList";
             this.mnList.ShortcutKeyDisplayString = "Hệ thống";
-            this.mnList.Size = new System.Drawing.Size(174, 52);
+            this.mnList.Size = new System.Drawing.Size(208, 52);
             this.mnList.Tag = "1";
             this.mnList.Text = "Danh Mục";
             this.mnList.Click += new System.EventHandler(this.mnList_Click);
@@ -111,7 +110,7 @@
             this.mnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnReport.Name = "mnReport";
             this.mnReport.ShortcutKeyDisplayString = "Hệ thống";
-            this.mnReport.Size = new System.Drawing.Size(153, 52);
+            this.mnReport.Size = new System.Drawing.Size(184, 52);
             this.mnReport.Tag = "1";
             this.mnReport.Text = "Báo Cáo";
             this.mnReport.Click += new System.EventHandler(this.mnReport_Click);
@@ -125,7 +124,7 @@
             this.mnSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnSetting.Name = "mnSetting";
             this.mnSetting.ShortcutKeyDisplayString = "Hệ thống";
-            this.mnSetting.Size = new System.Drawing.Size(143, 52);
+            this.mnSetting.Size = new System.Drawing.Size(172, 52);
             this.mnSetting.Tag = "1";
             this.mnSetting.Text = "Cài Đặt";
             this.mnSetting.Click += new System.EventHandler(this.mnSetting_Click);
@@ -134,8 +133,9 @@
             // 
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 56);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1136, 733);
+            this.pnlMain.Size = new System.Drawing.Size(1515, 915);
             this.pnlMain.TabIndex = 2;
             // 
             // lblUser
@@ -144,52 +144,41 @@
             this.lblUser.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(821, 17);
+            this.lblUser.Location = new System.Drawing.Point(1095, 21);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(99, 25);
+            this.lblUser.Size = new System.Drawing.Size(122, 31);
             this.lblUser.TabIndex = 3;
             this.lblUser.Text = "Duy ngu";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pictureBox1.Image = global::CoffeeShop.Properties.Resources.logot;
-            this.pictureBox1.Location = new System.Drawing.Point(949, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(812, 1);
+            this.label1.Location = new System.Drawing.Point(1083, 1);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(5, 55);
+            this.label1.Size = new System.Drawing.Size(7, 68);
             this.label1.TabIndex = 0;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 789);
+            this.ClientSize = new System.Drawing.Size(1515, 971);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cà fê Cô Ba";
+            this.Text = "Bánh bánh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +194,6 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolStripMenuItem mnList;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
 
     }

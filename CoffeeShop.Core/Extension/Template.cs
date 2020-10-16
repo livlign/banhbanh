@@ -33,5 +33,18 @@ namespace Subsonic2
                 return _orderItemTemp;
             }
         }
+
+        private static Template _banhbanhTemp;
+        public static Template banhbanhTemp
+        {
+            get
+            {
+                if (_banhbanhTemp == null)
+                {
+                    _banhbanhTemp = new TemplateCollection().Where(Template.Columns.Name, "BanhbanhTemp").Load().FirstOrDefault();
+                }
+                return _banhbanhTemp;
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subsonic2;
+using CoffeeShop.Core.Extension;
 
 namespace CoffeeShop.Control
 {
@@ -28,6 +29,7 @@ namespace CoffeeShop.Control
         bool isEditIngredient = false;
         Ingredient _selectedIngredient;
         List<Ingredient> listIngredient;
+        List<TempIngredient> listImportTemp;
 
         public Customer selectedCustomer
         {
@@ -125,6 +127,17 @@ namespace CoffeeShop.Control
 
             CustomerButton(false);
 
+            //import
+            dgvImportList.AutoGenerateColumns = false;
+            dgvImportTemp.AutoGenerateColumns = false;
+            dgvImportOrder.AutoGenerateColumns = false;
+            dgvImportOrderItem.AutoGenerateColumns = false;
+
+            listImportTemp = new List<TempIngredient>();
+            dtpImportOrderFrom.Value = DateTime.Now.AddMonths(-1);
+            dtpImportOrderTo.Value = DateTime.Now;
+            LoadImportOrder();
+
             //category
             dgvCategory.AutoGenerateColumns = false;
             CategoryLoadData();
@@ -134,10 +147,10 @@ namespace CoffeeShop.Control
             dgvProduct.AutoGenerateColumns = false;
             ProductButton(false);
 
-            //voucher
+            //ingredient
             dgvIngredient.AutoGenerateColumns = false;
             IngredientLoadData();
-            IngredientButton(false);            
+            IngredientButton(false);
         }
 
         #region Customer
@@ -525,6 +538,7 @@ namespace CoffeeShop.Control
         {
             listIngredient = new IngredientCollection().Load().OrderByDescending(c=>c.Active).ToList();
             dgvIngredient.DataSource = listIngredient;
+            dgvImportList.DataSource = listIngredient;
         }
         private void IngredientButton(bool IsEdit)
         {
@@ -621,9 +635,148 @@ namespace CoffeeShop.Control
         }
         #endregion
 
+        #region Import
+        private void dgvImportList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var selectedIngredient = dgvImportList.Rows[e.RowIndex].DataBoundItem as Ingredient;
+                var check = listImportTemp.FirstOrDefault(c => c.Id == selectedIngredient.Id);
+                if (check == null || check.Id <= 0)
+                {
+                    var temp = new TempIngredient();
+                    temp.Id = selectedIngredient.Id;
+                    temp.Name = selectedIngredient.Name;
+                    temp.Unit = selectedIngredient.Unit;
+                    temp.Price = (decimal)selectedIngredient.Price;
+                    temp.Quantity = 1;
+                    listImportTemp.Add(temp);
+                }
+                else
+                {
+                    check.Quantity += 1;
+                }
+                LoadItemImport();
+            }
+        }
+
+        public void LoadItemImport()
+        {
+            dgvImportTemp.DataSource = null;
+            dgvImportTemp.Rows.Clear();
+            dgvImportTemp.Refresh();
+
+            dgvImportTemp.DataSource = listImportTemp;
+
+            if (listImportTemp != null)
+            {
+                lblImportTotal.Text = "Tổng tiền: " + string.Format("{0:N0}", listImportTemp.Sum(c => c.Total));
+            }
+        }
+
+        private void btnImportCancel_Click(object sender, EventArgs e)
+        {
+            ImportResetText();
+        }
+
+        private void ImportResetText()
+        {
+            dtpImportDate.Value = DateTime.Now;
+            txtImportNote.Text = "";
+            listImportTemp = new List<TempIngredient>();
+            LoadItemImport();
+        }
+
+        private void dgvImportTemp_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            LoadItemImport();
+        }
+
+        private void dgvImportTemp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var removeIngredient = dgvImportTemp.Rows[e.RowIndex].DataBoundItem as TempIngredient;
+                listImportTemp.Remove(removeIngredient);
+                LoadItemImport();
+            }
+        }
+
+        private void btnImportSave_Click(object sender, EventArgs e)
+        {
+            if (listImportTemp.Count == 0) return;
+
+            IngredientOrder order = new IngredientOrder();
+            order.UserId = Utilities.CurrentUser.Id;
+            order.OrderDate = dtpImportDate.Value;
+            order.CreatedDate = DateTime.Now;
+            order.Total = listImportTemp.Sum(c => c.Total);
+            order.Note = txtImportNote.Text;
+            order.Save();
+
+            foreach (var ingredient in listImportTemp)
+            {
+                IngredientOrderItem item = new IngredientOrderItem();
+                item.OrderId = order.Id;
+                item.IngredientId = ingredient.Id;
+                item.Quantity = ingredient.Quantity;
+                item.Total = ingredient.Total;
+                item.Save();
+            }
+            ImportResetText();
+            LoadImportOrder();
+        }
+
+        private void btnImportSearchOrder_Click(object sender, EventArgs e)
+        {
+            LoadImportOrder();
+        }
+
+        private void LoadImportOrder()
+        {
+            var list = SPs.SpImportOrder(dtpImportOrderFrom.Value, dtpImportOrderTo.Value).GetDataSet().Tables[0];
+            dgvImportOrder.DataSource = list;
+        }
+
+        private void dgvImportOrder_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvImportOrderItem.DataSource = null;
+            if (dgvImportOrder.SelectedRows.Count > 0)
+            {
+                var orderid = int.Parse(dgvImportOrder.SelectedRows[0].Cells[0].Value.ToString());
+                var dt = SPs.SpImportOrderItem(orderid).GetDataSet().Tables[0];
+                dgvImportOrderItem.DataSource = dt;
+            }
+        }
+
+        #endregion
+
         private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilities.HandlerIntTextbox(e);
+        }
+
+        private void dgvImportOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {                
+                if (MessageBox.Show("Xóa hóa đơn này?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var orderid = int.Parse(dgvImportOrder.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    IngredientOrder.Delete(orderid);
+                    IngredientOrderItem.Delete(IngredientOrderItem.Columns.OrderId, orderid);
+                    LoadImportOrder();
+                }
+            }
         }
     }
 }

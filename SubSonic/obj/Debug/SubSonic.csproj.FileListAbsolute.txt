@@ -16,3 +16,9 @@ D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.csprojAssemblyReference.ca
 D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.csproj.CoreCompileInputs.cache
 D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.dll
 D:\Work\Projects\BanhBanh\SubSonic\obj\Debug\SubSonic.pdb
+D:\hehe\Git-banhbanh\SubSonic\bin\Debug\SubSonic.XML
+D:\hehe\Git-banhbanh\SubSonic\bin\Debug\SubSonic.dll
+D:\hehe\Git-banhbanh\SubSonic\bin\Debug\SubSonic.pdb
+D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.csproj.CoreCompileInputs.cache
+D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.dll
+D:\hehe\Git-banhbanh\SubSonic\obj\Debug\SubSonic.pdb

@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListManagerControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListManagerControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabProduct = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -101,10 +111,10 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCustomerAdd = new System.Windows.Forms.Button();
             this.btnCustomerEdit = new System.Windows.Forms.Button();
             this.btnCustomerCancel = new System.Windows.Forms.Button();
             this.btnCustomerSave = new System.Windows.Forms.Button();
+            this.btnCustomerAdd = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabIngredient = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -116,17 +126,62 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtIngredientName = new System.Windows.Forms.TextBox();
             this.chkIngredientActive = new System.Windows.Forms.CheckBox();
-            this.btnIngredientSave = new System.Windows.Forms.Button();
-            this.btnIngredientEdit = new System.Windows.Forms.Button();
-            this.btnIngredientAdd = new System.Windows.Forms.Button();
             this.btnIngredientCancel = new System.Windows.Forms.Button();
+            this.btnIngredientEdit = new System.Windows.Forms.Button();
+            this.btnIngredientSave = new System.Windows.Forms.Button();
+            this.btnIngredientAdd = new System.Windows.Forms.Button();
             this.dgvIngredient = new System.Windows.Forms.DataGridView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgvImportTemp = new System.Windows.Forms.DataGridView();
+            this.lblImportTotal = new System.Windows.Forms.Label();
+            this.btnImportSave = new System.Windows.Forms.Button();
+            this.txtImportNote = new System.Windows.Forms.TextBox();
+            this.dtpImportDate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnImportCancel = new System.Windows.Forms.Button();
+            this.btnImportLoadOrder = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvImportList = new System.Windows.Forms.DataGridView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dtpImportOrderFrom = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpImportOrderTo = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnImportSearchOrder = new System.Windows.Forms.Button();
+            this.dgvImportOrder = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvImportOrderItem = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabProduct.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlProductInfo.SuspendLayout();
@@ -142,6 +197,14 @@
             this.groupBox3.SuspendLayout();
             this.pnlIngredient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportTemp)).BeginInit();
+            this.btnImportLoadOrder.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportOrderItem)).BeginInit();
             this.SuspendLayout();
             // 
             // tabProduct
@@ -403,8 +466,8 @@
             // Column11
             // 
             this.Column11.DataPropertyName = "Price";
-            dataGridViewCellStyle5.Format = "N0";
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "N0";
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column11.FillWeight = 95.58414F;
             this.Column11.HeaderText = "Giá bán";
             this.Column11.MinimumWidth = 6;
@@ -413,8 +476,8 @@
             // Column12
             // 
             this.Column12.DataPropertyName = "Description";
-            dataGridViewCellStyle6.Format = "N0";
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "N0";
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column12.FillWeight = 160.8922F;
             this.Column12.HeaderText = "Mô tả";
             this.Column12.MinimumWidth = 6;
@@ -919,8 +982,8 @@
             // Column6
             // 
             this.Column6.DataPropertyName = "DistrictName";
-            dataGridViewCellStyle7.Format = "N0";
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Format = "N0";
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column6.FillWeight = 59.08629F;
             this.Column6.HeaderText = "Quận";
             this.Column6.MinimumWidth = 6;
@@ -942,22 +1005,6 @@
             this.Column9.HeaderText = "Hiển thị";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            // 
-            // btnCustomerAdd
-            // 
-            this.btnCustomerAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCustomerAdd.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCustomerAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerAdd.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerAdd.Location = new System.Drawing.Point(1552, 295);
-            this.btnCustomerAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCustomerAdd.Name = "btnCustomerAdd";
-            this.btnCustomerAdd.Size = new System.Drawing.Size(115, 53);
-            this.btnCustomerAdd.TabIndex = 12;
-            this.btnCustomerAdd.Text = "Thêm mới";
-            this.btnCustomerAdd.UseVisualStyleBackColor = false;
-            this.btnCustomerAdd.Click += new System.EventHandler(this.btnCustomerAdd_Click);
             // 
             // btnCustomerEdit
             // 
@@ -1007,11 +1054,28 @@
             this.btnCustomerSave.UseVisualStyleBackColor = false;
             this.btnCustomerSave.Click += new System.EventHandler(this.btnUserSave_Click);
             // 
+            // btnCustomerAdd
+            // 
+            this.btnCustomerAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCustomerAdd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCustomerAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerAdd.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerAdd.Location = new System.Drawing.Point(1552, 295);
+            this.btnCustomerAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCustomerAdd.Name = "btnCustomerAdd";
+            this.btnCustomerAdd.Size = new System.Drawing.Size(115, 53);
+            this.btnCustomerAdd.TabIndex = 12;
+            this.btnCustomerAdd.Text = "Thêm mới";
+            this.btnCustomerAdd.UseVisualStyleBackColor = false;
+            this.btnCustomerAdd.Click += new System.EventHandler(this.btnCustomerAdd_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabUser);
             this.tabControl1.Controls.Add(this.tabProduct);
             this.tabControl1.Controls.Add(this.tabIngredient);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImageList = this.imageList1;
@@ -1136,21 +1200,21 @@
             this.chkIngredientActive.Text = "Kích hoạt";
             this.chkIngredientActive.UseVisualStyleBackColor = true;
             // 
-            // btnIngredientSave
+            // btnIngredientCancel
             // 
-            this.btnIngredientSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngredientSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnIngredientSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngredientSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngredientSave.ForeColor = System.Drawing.Color.White;
-            this.btnIngredientSave.Location = new System.Drawing.Point(103, 193);
-            this.btnIngredientSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIngredientSave.Name = "btnIngredientSave";
-            this.btnIngredientSave.Size = new System.Drawing.Size(115, 57);
-            this.btnIngredientSave.TabIndex = 4;
-            this.btnIngredientSave.Text = "Lưu";
-            this.btnIngredientSave.UseVisualStyleBackColor = false;
-            this.btnIngredientSave.Click += new System.EventHandler(this.btnIngredientSave_Click);
+            this.btnIngredientCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngredientCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnIngredientCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngredientCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredientCancel.ForeColor = System.Drawing.Color.White;
+            this.btnIngredientCancel.Location = new System.Drawing.Point(226, 193);
+            this.btnIngredientCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngredientCancel.Name = "btnIngredientCancel";
+            this.btnIngredientCancel.Size = new System.Drawing.Size(115, 57);
+            this.btnIngredientCancel.TabIndex = 5;
+            this.btnIngredientCancel.Text = "Hủy";
+            this.btnIngredientCancel.UseVisualStyleBackColor = false;
+            this.btnIngredientCancel.Click += new System.EventHandler(this.btnIngredientCancel_Click);
             // 
             // btnIngredientEdit
             // 
@@ -1168,6 +1232,22 @@
             this.btnIngredientEdit.UseVisualStyleBackColor = false;
             this.btnIngredientEdit.Click += new System.EventHandler(this.btnIngredientEdit_Click);
             // 
+            // btnIngredientSave
+            // 
+            this.btnIngredientSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngredientSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnIngredientSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngredientSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredientSave.ForeColor = System.Drawing.Color.White;
+            this.btnIngredientSave.Location = new System.Drawing.Point(103, 193);
+            this.btnIngredientSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngredientSave.Name = "btnIngredientSave";
+            this.btnIngredientSave.Size = new System.Drawing.Size(115, 57);
+            this.btnIngredientSave.TabIndex = 4;
+            this.btnIngredientSave.Text = "Lưu";
+            this.btnIngredientSave.UseVisualStyleBackColor = false;
+            this.btnIngredientSave.Click += new System.EventHandler(this.btnIngredientSave_Click);
+            // 
             // btnIngredientAdd
             // 
             this.btnIngredientAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1183,22 +1263,6 @@
             this.btnIngredientAdd.Text = "Thêm mới";
             this.btnIngredientAdd.UseVisualStyleBackColor = false;
             this.btnIngredientAdd.Click += new System.EventHandler(this.btnIngredientAdd_Click);
-            // 
-            // btnIngredientCancel
-            // 
-            this.btnIngredientCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngredientCancel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnIngredientCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngredientCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngredientCancel.ForeColor = System.Drawing.Color.White;
-            this.btnIngredientCancel.Location = new System.Drawing.Point(226, 193);
-            this.btnIngredientCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIngredientCancel.Name = "btnIngredientCancel";
-            this.btnIngredientCancel.Size = new System.Drawing.Size(115, 57);
-            this.btnIngredientCancel.TabIndex = 5;
-            this.btnIngredientCancel.Text = "Hủy";
-            this.btnIngredientCancel.UseVisualStyleBackColor = false;
-            this.btnIngredientCancel.Click += new System.EventHandler(this.btnIngredientCancel_Click);
             // 
             // dgvIngredient
             // 
@@ -1227,15 +1291,6 @@
             this.dgvIngredient.TabIndex = 2;
             this.dgvIngredient.SelectionChanged += new System.EventHandler(this.dgvIngredient_SelectionChanged);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "1474198418_photo.png");
-            this.imageList1.Images.SetKeyName(1, "1474199028_folder.png");
-            this.imageList1.Images.SetKeyName(2, "1488109286_star.png");
-            this.imageList1.Images.SetKeyName(3, "1488109501_gift.png");
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
@@ -1256,8 +1311,8 @@
             // Column7
             // 
             this.Column7.DataPropertyName = "Price";
-            dataGridViewCellStyle8.Format = "N0";
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Format = "N0";
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column7.HeaderText = "Giá";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
@@ -1276,6 +1331,536 @@
             this.Column13.HeaderText = "Kích hoạt";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox6);
+            this.tabPage1.Controls.Add(this.btnImportLoadOrder);
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.ImageIndex = 4;
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1903, 932);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Mua nguyên liệu";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox6.Controls.Add(this.dgvImportTemp);
+            this.groupBox6.Controls.Add(this.lblImportTotal);
+            this.groupBox6.Controls.Add(this.btnImportSave);
+            this.groupBox6.Controls.Add(this.txtImportNote);
+            this.groupBox6.Controls.Add(this.dtpImportDate);
+            this.groupBox6.Controls.Add(this.label6);
+            this.groupBox6.Controls.Add(this.label5);
+            this.groupBox6.Controls.Add(this.btnImportCancel);
+            this.groupBox6.Location = new System.Drawing.Point(6, 407);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(832, 519);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Mua nguyên liệu";
+            // 
+            // dgvImportTemp
+            // 
+            this.dgvImportTemp.AllowUserToAddRows = false;
+            this.dgvImportTemp.AllowUserToDeleteRows = false;
+            this.dgvImportTemp.AllowUserToResizeRows = false;
+            this.dgvImportTemp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvImportTemp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvImportTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportTemp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.Column15,
+            this.Column16,
+            this.Column17});
+            this.dgvImportTemp.Location = new System.Drawing.Point(7, 22);
+            this.dgvImportTemp.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvImportTemp.MultiSelect = false;
+            this.dgvImportTemp.Name = "dgvImportTemp";
+            this.dgvImportTemp.RowHeadersVisible = false;
+            this.dgvImportTemp.RowHeadersWidth = 51;
+            this.dgvImportTemp.Size = new System.Drawing.Size(818, 318);
+            this.dgvImportTemp.TabIndex = 29;
+            this.dgvImportTemp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImportTemp_CellContentClick);
+            this.dgvImportTemp.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImportTemp_CellValueChanged);
+            // 
+            // lblImportTotal
+            // 
+            this.lblImportTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblImportTotal.AutoSize = true;
+            this.lblImportTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImportTotal.ForeColor = System.Drawing.Color.Red;
+            this.lblImportTotal.Location = new System.Drawing.Point(468, 346);
+            this.lblImportTotal.Name = "lblImportTotal";
+            this.lblImportTotal.Size = new System.Drawing.Size(194, 25);
+            this.lblImportTotal.TabIndex = 28;
+            this.lblImportTotal.Text = "Tổng tiền: 500.000";
+            // 
+            // btnImportSave
+            // 
+            this.btnImportSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnImportSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportSave.ForeColor = System.Drawing.Color.White;
+            this.btnImportSave.Location = new System.Drawing.Point(295, 456);
+            this.btnImportSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportSave.Name = "btnImportSave";
+            this.btnImportSave.Size = new System.Drawing.Size(115, 55);
+            this.btnImportSave.TabIndex = 26;
+            this.btnImportSave.Text = "Lưu";
+            this.btnImportSave.UseVisualStyleBackColor = false;
+            this.btnImportSave.Click += new System.EventHandler(this.btnImportSave_Click);
+            // 
+            // txtImportNote
+            // 
+            this.txtImportNote.Location = new System.Drawing.Point(96, 382);
+            this.txtImportNote.Multiline = true;
+            this.txtImportNote.Name = "txtImportNote";
+            this.txtImportNote.Size = new System.Drawing.Size(729, 67);
+            this.txtImportNote.TabIndex = 4;
+            // 
+            // dtpImportDate
+            // 
+            this.dtpImportDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpImportDate.Location = new System.Drawing.Point(96, 348);
+            this.dtpImportDate.Name = "dtpImportDate";
+            this.dtpImportDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpImportDate.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 382);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Ghi chú";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 348);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Ngày mua";
+            // 
+            // btnImportCancel
+            // 
+            this.btnImportCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnImportCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportCancel.ForeColor = System.Drawing.Color.White;
+            this.btnImportCancel.Location = new System.Drawing.Point(418, 456);
+            this.btnImportCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportCancel.Name = "btnImportCancel";
+            this.btnImportCancel.Size = new System.Drawing.Size(115, 55);
+            this.btnImportCancel.TabIndex = 27;
+            this.btnImportCancel.Text = "Hủy";
+            this.btnImportCancel.UseVisualStyleBackColor = false;
+            this.btnImportCancel.Click += new System.EventHandler(this.btnImportCancel_Click);
+            // 
+            // btnImportLoadOrder
+            // 
+            this.btnImportLoadOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportLoadOrder.Controls.Add(this.dgvImportOrderItem);
+            this.btnImportLoadOrder.Controls.Add(this.dgvImportOrder);
+            this.btnImportLoadOrder.Controls.Add(this.btnImportSearchOrder);
+            this.btnImportLoadOrder.Controls.Add(this.dtpImportOrderTo);
+            this.btnImportLoadOrder.Controls.Add(this.label21);
+            this.btnImportLoadOrder.Controls.Add(this.dtpImportOrderFrom);
+            this.btnImportLoadOrder.Controls.Add(this.label8);
+            this.btnImportLoadOrder.Location = new System.Drawing.Point(844, 3);
+            this.btnImportLoadOrder.Name = "btnImportLoadOrder";
+            this.btnImportLoadOrder.Size = new System.Drawing.Size(1053, 923);
+            this.btnImportLoadOrder.TabIndex = 1;
+            this.btnImportLoadOrder.TabStop = false;
+            this.btnImportLoadOrder.Text = "Báo cáo";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgvImportList);
+            this.groupBox4.Location = new System.Drawing.Point(6, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(832, 398);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Danh sách";
+            // 
+            // dgvImportList
+            // 
+            this.dgvImportList.AllowUserToAddRows = false;
+            this.dgvImportList.AllowUserToDeleteRows = false;
+            this.dgvImportList.AllowUserToResizeRows = false;
+            this.dgvImportList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvImportList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvImportList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.Column14});
+            this.dgvImportList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvImportList.Location = new System.Drawing.Point(7, 23);
+            this.dgvImportList.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvImportList.MultiSelect = false;
+            this.dgvImportList.Name = "dgvImportList";
+            this.dgvImportList.RowHeadersVisible = false;
+            this.dgvImportList.RowHeadersWidth = 51;
+            this.dgvImportList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvImportList.Size = new System.Drawing.Size(818, 365);
+            this.dgvImportList.TabIndex = 3;
+            this.dgvImportList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImportList_CellContentClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "1474198418_photo.png");
+            this.imageList1.Images.SetKeyName(1, "1474199028_folder.png");
+            this.imageList1.Images.SetKeyName(2, "1488109286_star.png");
+            this.imageList1.Images.SetKeyName(3, "1488109501_gift.png");
+            this.imageList1.Images.SetKeyName(4, "purchase-order.png");
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Tên";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Price";
+            dataGridViewCellStyle13.Format = "N0";
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Giá";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Unit";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Đơn vị tính";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "ActiveText";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Kích hoạt";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // Column14
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column14.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column14.HeaderText = "Chọn";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column14.Text = "Thêm";
+            this.Column14.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Tên";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Price";
+            dataGridViewCellStyle5.Format = "N0";
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn14.HeaderText = "Giá";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Unit";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Đơn vị tính";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "Quantity";
+            this.Column15.HeaderText = "Số lượng";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "Total";
+            dataGridViewCellStyle6.Format = "N0";
+            this.Column16.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column16.HeaderText = "Thành tiền";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column17.HeaderText = "Xóa";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.Text = "Xóa";
+            this.Column17.UseColumnTextForButtonValue = true;
+            // 
+            // dtpImportOrderFrom
+            // 
+            this.dtpImportOrderFrom.CustomFormat = "dd/MM/yyyy";
+            this.dtpImportOrderFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpImportOrderFrom.Location = new System.Drawing.Point(85, 27);
+            this.dtpImportOrderFrom.Name = "dtpImportOrderFrom";
+            this.dtpImportOrderFrom.Size = new System.Drawing.Size(148, 23);
+            this.dtpImportOrderFrom.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Từ ngày";
+            // 
+            // dtpImportOrderTo
+            // 
+            this.dtpImportOrderTo.CustomFormat = "dd/MM/yyyy";
+            this.dtpImportOrderTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpImportOrderTo.Location = new System.Drawing.Point(320, 27);
+            this.dtpImportOrderTo.Name = "dtpImportOrderTo";
+            this.dtpImportOrderTo.Size = new System.Drawing.Size(148, 23);
+            this.dtpImportOrderTo.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(245, 27);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(69, 17);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Đến ngày";
+            // 
+            // btnImportSearchOrder
+            // 
+            this.btnImportSearchOrder.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnImportSearchOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportSearchOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportSearchOrder.ForeColor = System.Drawing.Color.White;
+            this.btnImportSearchOrder.Location = new System.Drawing.Point(494, 23);
+            this.btnImportSearchOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportSearchOrder.Name = "btnImportSearchOrder";
+            this.btnImportSearchOrder.Size = new System.Drawing.Size(115, 33);
+            this.btnImportSearchOrder.TabIndex = 27;
+            this.btnImportSearchOrder.Text = "Tìm kiếm";
+            this.btnImportSearchOrder.UseVisualStyleBackColor = false;
+            this.btnImportSearchOrder.Click += new System.EventHandler(this.btnImportSearchOrder_Click);
+            // 
+            // dgvImportOrder
+            // 
+            this.dgvImportOrder.AllowUserToAddRows = false;
+            this.dgvImportOrder.AllowUserToDeleteRows = false;
+            this.dgvImportOrder.AllowUserToResizeRows = false;
+            this.dgvImportOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvImportOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvImportOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.Column19,
+            this.dataGridViewTextBoxColumn18,
+            this.Column18,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewButtonColumn1});
+            this.dgvImportOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvImportOrder.Location = new System.Drawing.Point(13, 64);
+            this.dgvImportOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvImportOrder.MultiSelect = false;
+            this.dgvImportOrder.Name = "dgvImportOrder";
+            this.dgvImportOrder.RowHeadersVisible = false;
+            this.dgvImportOrder.RowHeadersWidth = 51;
+            this.dgvImportOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvImportOrder.Size = new System.Drawing.Size(1033, 516);
+            this.dgvImportOrder.TabIndex = 28;
+            this.dgvImportOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImportOrder_CellContentClick);
+            this.dgvImportOrder.SelectionChanged += new System.EventHandler(this.dgvImportOrder_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "OrderDate";
+            dataGridViewCellStyle10.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle10.NullValue = null;
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column19.HeaderText = "Ngày mua";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Total";
+            dataGridViewCellStyle11.Format = "N0";
+            this.dataGridViewTextBoxColumn18.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewTextBoxColumn18.HeaderText = "Tổng tiền";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "Note";
+            this.Column18.HeaderText = "Ghi chú";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Người tạo";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "Xóa";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
+            // dgvImportOrderItem
+            // 
+            this.dgvImportOrderItem.AllowUserToAddRows = false;
+            this.dgvImportOrderItem.AllowUserToDeleteRows = false;
+            this.dgvImportOrderItem.AllowUserToResizeRows = false;
+            this.dgvImportOrderItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvImportOrderItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvImportOrderItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportOrderItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.Column20,
+            this.Column21,
+            this.dataGridViewTextBoxColumn21});
+            this.dgvImportOrderItem.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvImportOrderItem.Location = new System.Drawing.Point(13, 588);
+            this.dgvImportOrderItem.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvImportOrderItem.MultiSelect = false;
+            this.dgvImportOrderItem.Name = "dgvImportOrderItem";
+            this.dgvImportOrderItem.RowHeadersVisible = false;
+            this.dgvImportOrderItem.RowHeadersWidth = 51;
+            this.dgvImportOrderItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvImportOrderItem.Size = new System.Drawing.Size(1033, 327);
+            this.dgvImportOrderItem.TabIndex = 29;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Nguyên liệu";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Unit";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Đơn vị";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "Price";
+            dataGridViewCellStyle8.Format = "N0";
+            this.Column20.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column20.HeaderText = "Giá";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "Quantity";
+            this.Column21.HeaderText = "Số lượng";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Total";
+            dataGridViewCellStyle9.Format = "N0";
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn21.HeaderText = "Tổng tiền";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
             // 
             // ListManagerControl
             // 
@@ -1307,6 +1892,16 @@
             this.pnlIngredient.ResumeLayout(false);
             this.pnlIngredient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportTemp)).EndInit();
+            this.btnImportLoadOrder.ResumeLayout(false);
+            this.btnImportLoadOrder.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportOrderItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1406,5 +2001,50 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox btnImportLoadOrder;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtImportNote;
+        private System.Windows.Forms.DateTimePicker dtpImportDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnImportCancel;
+        private System.Windows.Forms.Button btnImportSave;
+        private System.Windows.Forms.Label lblImportTotal;
+        private System.Windows.Forms.DataGridView dgvImportList;
+        private System.Windows.Forms.DataGridView dgvImportTemp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewButtonColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewButtonColumn Column17;
+        private System.Windows.Forms.DateTimePicker dtpImportOrderTo;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker dtpImportOrderFrom;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnImportSearchOrder;
+        private System.Windows.Forms.DataGridView dgvImportOrder;
+        private System.Windows.Forms.DataGridView dgvImportOrderItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
     }
 }

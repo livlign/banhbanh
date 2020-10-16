@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -14,44 +15,33 @@ namespace CoffeeShop.FormUI
 {
     public partial class frmPrintOrder : Form
     {
-        private bool needPrint = false;
         public frmPrintOrder(string path)
         {
             InitializeComponent();
-            needPrint = true;
             webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser1.Navigate(path);   
-
         }
 
         public frmPrintOrder(Order order)
         {
             InitializeComponent();
-            needPrint = false;
-            webBrowser1.ScriptErrorsSuppressed = true;
-            var ReciptFolder = @"C:/CoffeeShop/Recipt/" + order.DateCreated.Value.Year
-                + "/" + order.DateCreated.Value.Month + "/" + order.DateCreated.Value.Day + "/";
-            var filename = ReciptFolder + "HoaDon_" + order.OrderRef + ".html";
-            webBrowser1.Navigate(filename);         
-        }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-            try
-            {
-                if (needPrint)
-                {
-                    webBrowser1.Print();
-                    Thread.Sleep(1000);
-                    webBrowser1.Print();
-                    this.Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                Utilities.WriteLogError("Error Print: " + ex.Message);
-            }
-            
+            string template = Templates.banhbanhTemp.TemplateText;
+
+            var data = SPs.SpPrintOrder(order.Id).GetDataSet().Tables[0];
+
+            var summary = "Giá: " + order.ValueX.Value.ToString("n0")
+                        + " - Ship: " + order.ShipCost.Value.ToString("n0")
+                        + " - Thành tiền: " + order.TotalValue.Value.ToString("n0")
+                        + " - Note: " + order.Note;
+
+            template = template.Replace("<orderref>", data.Rows[0]["OrderRef"].ToString())
+                               .Replace("<name>", data.Rows[0]["Name"].ToString())
+                               .Replace("<phone>", data.Rows[0]["Phone"].ToString())
+                               .Replace("<address>", data.Rows[0]["Address"].ToString())
+                               .Replace("<item>", data.Rows[0]["Product"].ToString())
+                               .Replace("<summary>", summary);
+            webBrowser1.DocumentText = template;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -149,8 +149,8 @@ namespace CoffeeShop.Control
             if (dgvSaleReport_Order.SelectedRows.Count > 0)
             {
                 var orderid = Int32.Parse(dgvSaleReport_Order.SelectedRows[0].Cells[0].Value.ToString());
-                frmPrintOrder frm = new frmPrintOrder(new Order(orderid));
-                frm.ShowDialog();
+                frmPrintOrder frm = new frmPrintOrder(orderid);
+                frm.Show();
             }
         }
 

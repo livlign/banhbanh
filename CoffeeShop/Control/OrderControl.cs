@@ -131,7 +131,7 @@ namespace CoffeeShop.Control
             {
                 Order o = new Order();
                 var count = new OrderCollection().Where(Order.Columns.DateCreated, SubSonic.Comparison.GreaterOrEquals, DateTime.Now.Date).Load().Count();
-                o.OrderRef = DateTime.Now.ToString("yyMMdd") + string.Format("{0:0000}", count + 1);
+                o.OrderRef = "HD" + DateTime.Now.ToString("yyMMdd") + string.Format("{0:000}", count + 1);
                 o.CustomerID = selectedCustomer.Id;
                 o.ValueX = ListTempItem.Sum(c => c.TotalPrice);
                 o.TotalValue = TotalValue;

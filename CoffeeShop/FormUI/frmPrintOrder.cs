@@ -22,17 +22,17 @@ namespace CoffeeShop.FormUI
             webBrowser1.Navigate(path);   
         }
 
-        public frmPrintOrder(Order order)
+        public frmPrintOrder(int orderid)
         {
             InitializeComponent();
 
             string template = Templates.banhbanhTemp.TemplateText;
 
-            var data = SPs.SpPrintOrder(order.Id).GetDataSet().Tables[0];
-
+            var data = SPs.SpPrintOrder(orderid).GetDataSet().Tables[0];
+            var order = new Order(orderid);
             var summary = "Giá: " + order.ValueX.Value.ToString("n0")
-                        + " - Ship: " + order.ShipCost.Value.ToString("n0")
-                        + " - Thành tiền: " + order.TotalValue.Value.ToString("n0")
+                        + " - Ship: " + (order.ShipCost == null ? "0" : order.ShipCost.Value.ToString("n0"))
+                        + " - Tổng: " + order.TotalValue.Value.ToString("n0")
                         + " - Note: " + order.Note;
 
             template = template.Replace("<orderref>", data.Rows[0]["OrderRef"].ToString())
@@ -51,7 +51,7 @@ namespace CoffeeShop.FormUI
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            webBrowser1.Print();
+            webBrowser1.ShowPrintDialog();
         }
     }
 }

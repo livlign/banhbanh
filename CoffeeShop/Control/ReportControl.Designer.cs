@@ -47,18 +47,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -119,9 +119,27 @@
             this.dtpProductReportFrom = new System.Windows.Forms.DateTimePicker();
             this.tpCustomerReport = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.dgvCustomerReport_OrderDetail = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCustomerReport_Order = new System.Windows.Forms.DataGridView();
+            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgvCustomerReport_Main = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnCustomerReportSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -137,24 +155,6 @@
             this.bwReportProductDate = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bwSaleReport = new System.ComponentModel.BackgroundWorker();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCustomerReport_OrderDetail = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -173,12 +173,12 @@
             this.groupBox7.SuspendLayout();
             this.tpCustomerReport.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_OrderDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_Order)).BeginInit();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_Main)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.cmsOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_OrderDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -188,10 +188,9 @@
             this.tabControl1.Controls.Add(this.tpCustomerReport);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1647, 809);
+            this.tabControl1.Size = new System.Drawing.Size(1235, 657);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -200,11 +199,10 @@
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1639, 780);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1227, 631);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Báo cáo bán hàng theo ngày";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -217,11 +215,9 @@
             this.groupBox4.Controls.Add(this.lblTotalShip);
             this.groupBox4.Controls.Add(this.lblTotalRevenue);
             this.groupBox4.Controls.Add(this.dgvSaleReport_Date);
-            this.groupBox4.Location = new System.Drawing.Point(4, 64);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(3, 52);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(896, 706);
+            this.groupBox4.Size = new System.Drawing.Size(672, 574);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tổng hợp";
@@ -231,10 +227,9 @@
             this.lblTotalSold.AutoSize = true;
             this.lblTotalSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalSold.ForeColor = System.Drawing.Color.Red;
-            this.lblTotalSold.Location = new System.Drawing.Point(8, 22);
-            this.lblTotalSold.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalSold.Location = new System.Drawing.Point(6, 18);
             this.lblTotalSold.Name = "lblTotalSold";
-            this.lblTotalSold.Size = new System.Drawing.Size(245, 24);
+            this.lblTotalSold.Size = new System.Drawing.Size(196, 18);
             this.lblTotalSold.TabIndex = 4;
             this.lblTotalSold.Text = "Tiền hàng: 1.000.000.000";
             // 
@@ -243,10 +238,9 @@
             this.lblTotalShip.AutoSize = true;
             this.lblTotalShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalShip.ForeColor = System.Drawing.Color.Red;
-            this.lblTotalShip.Location = new System.Drawing.Point(287, 22);
-            this.lblTotalShip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalShip.Location = new System.Drawing.Point(215, 18);
             this.lblTotalShip.Name = "lblTotalShip";
-            this.lblTotalShip.Size = new System.Drawing.Size(237, 24);
+            this.lblTotalShip.Size = new System.Drawing.Size(191, 18);
             this.lblTotalShip.TabIndex = 3;
             this.lblTotalShip.Text = "Tiền ship: 1.000.000.000";
             // 
@@ -256,10 +250,9 @@
             this.lblTotalRevenue.AutoSize = true;
             this.lblTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRevenue.ForeColor = System.Drawing.Color.Red;
-            this.lblTotalRevenue.Location = new System.Drawing.Point(572, 22);
-            this.lblTotalRevenue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRevenue.Location = new System.Drawing.Point(429, 18);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(299, 24);
+            this.lblTotalRevenue.Size = new System.Drawing.Size(240, 18);
             this.lblTotalRevenue.TabIndex = 2;
             this.lblTotalRevenue.Text = "Tổng doanh thu: 1.000.000.000";
             // 
@@ -281,8 +274,7 @@
             this.dataGridViewTextBoxColumn7,
             this.Column13,
             this.Column14});
-            this.dgvSaleReport_Date.Location = new System.Drawing.Point(4, 52);
-            this.dgvSaleReport_Date.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSaleReport_Date.Location = new System.Drawing.Point(3, 42);
             this.dgvSaleReport_Date.Name = "dgvSaleReport_Date";
             this.dgvSaleReport_Date.ReadOnly = true;
             this.dgvSaleReport_Date.RowHeadersVisible = false;
@@ -291,7 +283,7 @@
             this.dgvSaleReport_Date.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSaleReport_Date.RowTemplate.Height = 30;
             this.dgvSaleReport_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaleReport_Date.Size = new System.Drawing.Size(888, 647);
+            this.dgvSaleReport_Date.Size = new System.Drawing.Size(666, 526);
             this.dgvSaleReport_Date.TabIndex = 0;
             this.dgvSaleReport_Date.SelectionChanged += new System.EventHandler(this.dgvSaleReport_Date_SelectionChanged);
             // 
@@ -348,11 +340,9 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.dgvSaleReport_Item);
-            this.groupBox3.Location = new System.Drawing.Point(908, 450);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(681, 366);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(723, 320);
+            this.groupBox3.Size = new System.Drawing.Size(542, 260);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết hóa đơn";
@@ -372,8 +362,7 @@
             this.Column10,
             this.Column11});
             this.dgvSaleReport_Item.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSaleReport_Item.Location = new System.Drawing.Point(4, 19);
-            this.dgvSaleReport_Item.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSaleReport_Item.Location = new System.Drawing.Point(3, 16);
             this.dgvSaleReport_Item.Name = "dgvSaleReport_Item";
             this.dgvSaleReport_Item.ReadOnly = true;
             this.dgvSaleReport_Item.RowHeadersVisible = false;
@@ -382,7 +371,7 @@
             this.dgvSaleReport_Item.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSaleReport_Item.RowTemplate.Height = 30;
             this.dgvSaleReport_Item.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaleReport_Item.Size = new System.Drawing.Size(715, 297);
+            this.dgvSaleReport_Item.Size = new System.Drawing.Size(536, 241);
             this.dgvSaleReport_Item.TabIndex = 1;
             // 
             // Column8
@@ -427,11 +416,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgvSaleReport_Order);
-            this.groupBox2.Location = new System.Drawing.Point(908, 64);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(681, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(723, 378);
+            this.groupBox2.Size = new System.Drawing.Size(542, 307);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóa đơn";
@@ -441,7 +428,6 @@
             this.dgvSaleReport_Order.AllowUserToAddRows = false;
             this.dgvSaleReport_Order.AllowUserToDeleteRows = false;
             this.dgvSaleReport_Order.AllowUserToOrderColumns = true;
-            this.dgvSaleReport_Order.AllowUserToResizeColumns = false;
             this.dgvSaleReport_Order.AllowUserToResizeRows = false;
             this.dgvSaleReport_Order.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSaleReport_Order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -454,8 +440,7 @@
             this.Column4,
             this.Column5});
             this.dgvSaleReport_Order.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSaleReport_Order.Location = new System.Drawing.Point(4, 19);
-            this.dgvSaleReport_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSaleReport_Order.Location = new System.Drawing.Point(3, 16);
             this.dgvSaleReport_Order.Name = "dgvSaleReport_Order";
             this.dgvSaleReport_Order.ReadOnly = true;
             this.dgvSaleReport_Order.RowHeadersVisible = false;
@@ -464,7 +449,7 @@
             this.dgvSaleReport_Order.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvSaleReport_Order.RowTemplate.Height = 30;
             this.dgvSaleReport_Order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaleReport_Order.Size = new System.Drawing.Size(715, 355);
+            this.dgvSaleReport_Order.Size = new System.Drawing.Size(536, 288);
             this.dgvSaleReport_Order.TabIndex = 0;
             this.dgvSaleReport_Order.SelectionChanged += new System.EventHandler(this.dgvSaleReport_Order_SelectionChanged);
             // 
@@ -545,11 +530,9 @@
             this.groupBox1.Controls.Add(this.dtpSaleReport_ToDate);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpSaleReport_FromDate);
-            this.groupBox1.Location = new System.Drawing.Point(4, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1627, 63);
+            this.groupBox1.Size = new System.Drawing.Size(1220, 51);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -557,10 +540,9 @@
             // pbSaleReport
             // 
             this.pbSaleReport.Image = global::CoffeeShop.Properties.Resources.loading;
-            this.pbSaleReport.Location = new System.Drawing.Point(539, 11);
-            this.pbSaleReport.Margin = new System.Windows.Forms.Padding(4);
+            this.pbSaleReport.Location = new System.Drawing.Point(404, 9);
             this.pbSaleReport.Name = "pbSaleReport";
-            this.pbSaleReport.Size = new System.Drawing.Size(49, 46);
+            this.pbSaleReport.Size = new System.Drawing.Size(37, 37);
             this.pbSaleReport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSaleReport.TabIndex = 5;
             this.pbSaleReport.TabStop = false;
@@ -571,10 +553,9 @@
             this.btnSaleReport_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaleReport_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaleReport_Search.ForeColor = System.Drawing.Color.White;
-            this.btnSaleReport_Search.Location = new System.Drawing.Point(539, 15);
-            this.btnSaleReport_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaleReport_Search.Location = new System.Drawing.Point(404, 12);
             this.btnSaleReport_Search.Name = "btnSaleReport_Search";
-            this.btnSaleReport_Search.Size = new System.Drawing.Size(121, 38);
+            this.btnSaleReport_Search.Size = new System.Drawing.Size(91, 31);
             this.btnSaleReport_Search.TabIndex = 15;
             this.btnSaleReport_Search.Text = "Tìm kiếm";
             this.btnSaleReport_Search.UseVisualStyleBackColor = false;
@@ -582,10 +563,9 @@
             // 
             // txtSaleReport_User
             // 
-            this.txtSaleReport_User.Location = new System.Drawing.Point(1113, 23);
-            this.txtSaleReport_User.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSaleReport_User.Location = new System.Drawing.Point(835, 19);
             this.txtSaleReport_User.Name = "txtSaleReport_User";
-            this.txtSaleReport_User.Size = new System.Drawing.Size(235, 22);
+            this.txtSaleReport_User.Size = new System.Drawing.Size(177, 20);
             this.txtSaleReport_User.TabIndex = 5;
             this.txtSaleReport_User.Visible = false;
             this.txtSaleReport_User.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSaleReport_User_KeyUp);
@@ -593,10 +573,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1036, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(777, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nhân viên";
             this.label3.Visible = false;
@@ -604,10 +583,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(198, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Đến ngày";
             // 
@@ -615,20 +593,18 @@
             // 
             this.dtpSaleReport_ToDate.CustomFormat = "dd/MM/yyyy";
             this.dtpSaleReport_ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSaleReport_ToDate.Location = new System.Drawing.Point(343, 23);
-            this.dtpSaleReport_ToDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSaleReport_ToDate.Location = new System.Drawing.Point(257, 19);
             this.dtpSaleReport_ToDate.Name = "dtpSaleReport_ToDate";
             this.dtpSaleReport_ToDate.ShowCheckBox = true;
-            this.dtpSaleReport_ToDate.Size = new System.Drawing.Size(167, 22);
+            this.dtpSaleReport_ToDate.Size = new System.Drawing.Size(126, 20);
             this.dtpSaleReport_ToDate.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Từ ngày";
             // 
@@ -636,11 +612,10 @@
             // 
             this.dtpSaleReport_FromDate.CustomFormat = "dd/MM/yyyy";
             this.dtpSaleReport_FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSaleReport_FromDate.Location = new System.Drawing.Point(85, 23);
-            this.dtpSaleReport_FromDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSaleReport_FromDate.Location = new System.Drawing.Point(64, 19);
             this.dtpSaleReport_FromDate.Name = "dtpSaleReport_FromDate";
             this.dtpSaleReport_FromDate.ShowCheckBox = true;
-            this.dtpSaleReport_FromDate.Size = new System.Drawing.Size(167, 22);
+            this.dtpSaleReport_FromDate.Size = new System.Drawing.Size(126, 20);
             this.dtpSaleReport_FromDate.TabIndex = 0;
             // 
             // tabPage2
@@ -648,11 +623,10 @@
             this.tabPage2.Controls.Add(this.groupBox8);
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1639, 780);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(1227, 631);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Báo cáo bán hàng theo sản phẩm";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -662,11 +636,9 @@
             this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox8.Controls.Add(this.dgvReportProduct);
-            this.groupBox8.Location = new System.Drawing.Point(4, 66);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Location = new System.Drawing.Point(3, 54);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(1237, 703);
+            this.groupBox8.Size = new System.Drawing.Size(928, 571);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Theo sản phẩm";
@@ -688,8 +660,7 @@
             this.Column19,
             this.Column20});
             this.dgvReportProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReportProduct.Location = new System.Drawing.Point(4, 19);
-            this.dgvReportProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvReportProduct.Location = new System.Drawing.Point(3, 16);
             this.dgvReportProduct.MultiSelect = false;
             this.dgvReportProduct.Name = "dgvReportProduct";
             this.dgvReportProduct.ReadOnly = true;
@@ -699,7 +670,7 @@
             this.dgvReportProduct.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvReportProduct.RowTemplate.Height = 30;
             this.dgvReportProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReportProduct.Size = new System.Drawing.Size(1229, 680);
+            this.dgvReportProduct.Size = new System.Drawing.Size(922, 552);
             this.dgvReportProduct.TabIndex = 0;
             this.dgvReportProduct.SelectionChanged += new System.EventHandler(this.dgvReportProduct_SelectionChanged);
             // 
@@ -765,11 +736,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.dgvReportProductDate);
-            this.groupBox6.Location = new System.Drawing.Point(1249, 66);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Location = new System.Drawing.Point(937, 54);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(383, 699);
+            this.groupBox6.Size = new System.Drawing.Size(287, 568);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Theo ngày";
@@ -789,8 +758,7 @@
             this.Column24,
             this.Column25});
             this.dgvReportProductDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReportProductDate.Location = new System.Drawing.Point(4, 19);
-            this.dgvReportProductDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvReportProductDate.Location = new System.Drawing.Point(3, 16);
             this.dgvReportProductDate.Name = "dgvReportProductDate";
             this.dgvReportProductDate.ReadOnly = true;
             this.dgvReportProductDate.RowHeadersVisible = false;
@@ -799,7 +767,7 @@
             this.dgvReportProductDate.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvReportProductDate.RowTemplate.Height = 30;
             this.dgvReportProductDate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReportProductDate.Size = new System.Drawing.Size(375, 676);
+            this.dgvReportProductDate.Size = new System.Drawing.Size(281, 549);
             this.dgvReportProductDate.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn5
@@ -849,11 +817,9 @@
             this.groupBox7.Controls.Add(this.dtpProductReportTo);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.dtpProductReportFrom);
-            this.groupBox7.Location = new System.Drawing.Point(4, 2);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(3, 2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(1628, 63);
+            this.groupBox7.Size = new System.Drawing.Size(1221, 51);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Tìm kiếm";
@@ -862,10 +828,9 @@
             // 
             this.cmbProductReportCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductReportCategory.FormattingEnabled = true;
-            this.cmbProductReportCategory.Location = new System.Drawing.Point(519, 22);
-            this.cmbProductReportCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbProductReportCategory.Location = new System.Drawing.Point(389, 18);
             this.cmbProductReportCategory.Name = "cmbProductReportCategory";
-            this.cmbProductReportCategory.Size = new System.Drawing.Size(412, 24);
+            this.cmbProductReportCategory.Size = new System.Drawing.Size(310, 21);
             this.cmbProductReportCategory.TabIndex = 16;
             this.cmbProductReportCategory.SelectedIndexChanged += new System.EventHandler(this.cmbProductReportCategory_SelectedIndexChanged);
             // 
@@ -875,10 +840,9 @@
             this.btnReportProductSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportProductSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportProductSearch.ForeColor = System.Drawing.Color.White;
-            this.btnReportProductSearch.Location = new System.Drawing.Point(940, 14);
-            this.btnReportProductSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReportProductSearch.Location = new System.Drawing.Point(705, 11);
             this.btnReportProductSearch.Name = "btnReportProductSearch";
-            this.btnReportProductSearch.Size = new System.Drawing.Size(121, 38);
+            this.btnReportProductSearch.Size = new System.Drawing.Size(91, 31);
             this.btnReportProductSearch.TabIndex = 15;
             this.btnReportProductSearch.Text = "Tìm kiếm";
             this.btnReportProductSearch.UseVisualStyleBackColor = false;
@@ -887,10 +851,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(264, 27);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(198, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Đến ngày";
             // 
@@ -898,20 +861,18 @@
             // 
             this.dtpProductReportTo.CustomFormat = "dd/MM/yyyy";
             this.dtpProductReportTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpProductReportTo.Location = new System.Drawing.Point(343, 23);
-            this.dtpProductReportTo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpProductReportTo.Location = new System.Drawing.Point(257, 19);
             this.dtpProductReportTo.Name = "dtpProductReportTo";
             this.dtpProductReportTo.ShowCheckBox = true;
-            this.dtpProductReportTo.Size = new System.Drawing.Size(167, 22);
+            this.dtpProductReportTo.Size = new System.Drawing.Size(126, 20);
             this.dtpProductReportTo.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 27);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(12, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 17);
+            this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Từ ngày";
             // 
@@ -919,11 +880,10 @@
             // 
             this.dtpProductReportFrom.CustomFormat = "dd/MM/yyyy";
             this.dtpProductReportFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpProductReportFrom.Location = new System.Drawing.Point(85, 23);
-            this.dtpProductReportFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpProductReportFrom.Location = new System.Drawing.Point(64, 19);
             this.dtpProductReportFrom.Name = "dtpProductReportFrom";
             this.dtpProductReportFrom.ShowCheckBox = true;
-            this.dtpProductReportFrom.Size = new System.Drawing.Size(167, 22);
+            this.dtpProductReportFrom.Size = new System.Drawing.Size(126, 20);
             this.dtpProductReportFrom.TabIndex = 0;
             // 
             // tpCustomerReport
@@ -931,11 +891,10 @@
             this.tpCustomerReport.Controls.Add(this.groupBox10);
             this.tpCustomerReport.Controls.Add(this.groupBox9);
             this.tpCustomerReport.Controls.Add(this.groupBox5);
-            this.tpCustomerReport.Location = new System.Drawing.Point(4, 25);
-            this.tpCustomerReport.Margin = new System.Windows.Forms.Padding(4);
+            this.tpCustomerReport.Location = new System.Drawing.Point(4, 22);
             this.tpCustomerReport.Name = "tpCustomerReport";
-            this.tpCustomerReport.Padding = new System.Windows.Forms.Padding(4);
-            this.tpCustomerReport.Size = new System.Drawing.Size(1639, 780);
+            this.tpCustomerReport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCustomerReport.Size = new System.Drawing.Size(1227, 631);
             this.tpCustomerReport.TabIndex = 2;
             this.tpCustomerReport.Text = "Báo cáo bán hàng theo khách hàng";
             this.tpCustomerReport.UseVisualStyleBackColor = true;
@@ -947,21 +906,82 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.dgvCustomerReport_OrderDetail);
             this.groupBox10.Controls.Add(this.dgvCustomerReport_Order);
-            this.groupBox10.Location = new System.Drawing.Point(827, 78);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Location = new System.Drawing.Point(620, 63);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox10.Size = new System.Drawing.Size(805, 698);
+            this.groupBox10.Size = new System.Drawing.Size(604, 567);
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Chi tiết";
+            // 
+            // dgvCustomerReport_OrderDetail
+            // 
+            this.dgvCustomerReport_OrderDetail.AllowUserToAddRows = false;
+            this.dgvCustomerReport_OrderDetail.AllowUserToDeleteRows = false;
+            this.dgvCustomerReport_OrderDetail.AllowUserToOrderColumns = true;
+            this.dgvCustomerReport_OrderDetail.AllowUserToResizeColumns = false;
+            this.dgvCustomerReport_OrderDetail.AllowUserToResizeRows = false;
+            this.dgvCustomerReport_OrderDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustomerReport_OrderDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomerReport_OrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomerReport_OrderDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.dgvCustomerReport_OrderDetail.Location = new System.Drawing.Point(3, 301);
+            this.dgvCustomerReport_OrderDetail.Name = "dgvCustomerReport_OrderDetail";
+            this.dgvCustomerReport_OrderDetail.ReadOnly = true;
+            this.dgvCustomerReport_OrderDetail.RowHeadersVisible = false;
+            this.dgvCustomerReport_OrderDetail.RowHeadersWidth = 51;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCustomerReport_OrderDetail.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvCustomerReport_OrderDetail.RowTemplate.Height = 30;
+            this.dgvCustomerReport_OrderDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCustomerReport_OrderDetail.Size = new System.Drawing.Size(595, 263);
+            this.dgvCustomerReport_OrderDetail.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Sản phẩm";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Price";
+            dataGridViewCellStyle19.Format = "N0";
+            this.dataGridViewTextBoxColumn17.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewTextBoxColumn17.HeaderText = "Giá";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Qty";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Số lượng";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Total";
+            dataGridViewCellStyle20.Format = "N0";
+            this.dataGridViewTextBoxColumn19.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewTextBoxColumn19.HeaderText = "Tổng tiền";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             // 
             // dgvCustomerReport_Order
             // 
             this.dgvCustomerReport_Order.AllowUserToAddRows = false;
             this.dgvCustomerReport_Order.AllowUserToDeleteRows = false;
             this.dgvCustomerReport_Order.AllowUserToOrderColumns = true;
-            this.dgvCustomerReport_Order.AllowUserToResizeColumns = false;
             this.dgvCustomerReport_Order.AllowUserToResizeRows = false;
             this.dgvCustomerReport_Order.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -976,8 +996,7 @@
             this.Column27,
             this.Column29,
             this.Column30});
-            this.dgvCustomerReport_Order.Location = new System.Drawing.Point(4, 19);
-            this.dgvCustomerReport_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCustomerReport_Order.Location = new System.Drawing.Point(3, 15);
             this.dgvCustomerReport_Order.Name = "dgvCustomerReport_Order";
             this.dgvCustomerReport_Order.ReadOnly = true;
             this.dgvCustomerReport_Order.RowHeadersVisible = false;
@@ -986,232 +1005,9 @@
             this.dgvCustomerReport_Order.RowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvCustomerReport_Order.RowTemplate.Height = 30;
             this.dgvCustomerReport_Order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerReport_Order.Size = new System.Drawing.Size(793, 343);
+            this.dgvCustomerReport_Order.Size = new System.Drawing.Size(595, 279);
             this.dgvCustomerReport_Order.TabIndex = 0;
             this.dgvCustomerReport_Order.SelectionChanged += new System.EventHandler(this.dgvCustomerReport_Order_SelectionChanged);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox9.Controls.Add(this.dgvCustomerReport_Main);
-            this.groupBox9.Location = new System.Drawing.Point(8, 78);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Size = new System.Drawing.Size(811, 698);
-            this.groupBox9.TabIndex = 5;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Tổng hợp";
-            // 
-            // dgvCustomerReport_Main
-            // 
-            this.dgvCustomerReport_Main.AllowUserToAddRows = false;
-            this.dgvCustomerReport_Main.AllowUserToDeleteRows = false;
-            this.dgvCustomerReport_Main.AllowUserToOrderColumns = true;
-            this.dgvCustomerReport_Main.AllowUserToResizeColumns = false;
-            this.dgvCustomerReport_Main.AllowUserToResizeRows = false;
-            this.dgvCustomerReport_Main.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCustomerReport_Main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerReport_Main.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.Column6,
-            this.Column21,
-            this.Column22,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn1});
-            this.dgvCustomerReport_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCustomerReport_Main.Location = new System.Drawing.Point(4, 19);
-            this.dgvCustomerReport_Main.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCustomerReport_Main.Name = "dgvCustomerReport_Main";
-            this.dgvCustomerReport_Main.ReadOnly = true;
-            this.dgvCustomerReport_Main.RowHeadersVisible = false;
-            this.dgvCustomerReport_Main.RowHeadersWidth = 51;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCustomerReport_Main.RowsDefaultCellStyle = dataGridViewCellStyle30;
-            this.dgvCustomerReport_Main.RowTemplate.Height = 30;
-            this.dgvCustomerReport_Main.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerReport_Main.Size = new System.Drawing.Size(803, 675);
-            this.dgvCustomerReport_Main.TabIndex = 0;
-            this.dgvCustomerReport_Main.SelectionChanged += new System.EventHandler(this.dgvCustomerReport_Main_SelectionChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.btnCustomerReportSearch);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.dtpCustomerReportTo);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.dtpCustomerReportFrom);
-            this.groupBox5.Location = new System.Drawing.Point(4, 7);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(1628, 63);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tìm kiếm";
-            // 
-            // btnCustomerReportSearch
-            // 
-            this.btnCustomerReportSearch.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCustomerReportSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerReportSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerReportSearch.ForeColor = System.Drawing.Color.White;
-            this.btnCustomerReportSearch.Location = new System.Drawing.Point(519, 15);
-            this.btnCustomerReportSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCustomerReportSearch.Name = "btnCustomerReportSearch";
-            this.btnCustomerReportSearch.Size = new System.Drawing.Size(121, 38);
-            this.btnCustomerReportSearch.TabIndex = 15;
-            this.btnCustomerReportSearch.Text = "Tìm kiếm";
-            this.btnCustomerReportSearch.UseVisualStyleBackColor = false;
-            this.btnCustomerReportSearch.Click += new System.EventHandler(this.btnCustomerReportSearch_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(264, 27);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Đến ngày";
-            // 
-            // dtpCustomerReportTo
-            // 
-            this.dtpCustomerReportTo.CustomFormat = "dd/MM/yyyy";
-            this.dtpCustomerReportTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCustomerReportTo.Location = new System.Drawing.Point(343, 23);
-            this.dtpCustomerReportTo.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpCustomerReportTo.Name = "dtpCustomerReportTo";
-            this.dtpCustomerReportTo.ShowCheckBox = true;
-            this.dtpCustomerReportTo.Size = new System.Drawing.Size(167, 22);
-            this.dtpCustomerReportTo.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Từ ngày";
-            // 
-            // dtpCustomerReportFrom
-            // 
-            this.dtpCustomerReportFrom.CustomFormat = "dd/MM/yyyy";
-            this.dtpCustomerReportFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCustomerReportFrom.Location = new System.Drawing.Point(85, 23);
-            this.dtpCustomerReportFrom.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpCustomerReportFrom.Name = "dtpCustomerReportFrom";
-            this.dtpCustomerReportFrom.ShowCheckBox = true;
-            this.dtpCustomerReportFrom.Size = new System.Drawing.Size(167, 22);
-            this.dtpCustomerReportFrom.TabIndex = 0;
-            // 
-            // bwLoadItems
-            // 
-            this.bwLoadItems.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadItems_DoWork);
-            this.bwLoadItems.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadItems_RunWorkerCompleted);
-            // 
-            // bwLoadOrder
-            // 
-            this.bwLoadOrder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadOrder_DoWork);
-            this.bwLoadOrder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadOrder_RunWorkerCompleted);
-            // 
-            // cmsOrder
-            // 
-            this.cmsOrder.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsOrder.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inHóaĐơnToolStripMenuItem,
-            this.hủyHóaĐơnToolStripMenuItem});
-            this.cmsOrder.Name = "cmsOrder";
-            this.cmsOrder.Size = new System.Drawing.Size(164, 52);
-            // 
-            // inHóaĐơnToolStripMenuItem
-            // 
-            this.inHóaĐơnToolStripMenuItem.Name = "inHóaĐơnToolStripMenuItem";
-            this.inHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
-            this.inHóaĐơnToolStripMenuItem.Text = "In hóa đơn";
-            this.inHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.inHóaĐơnToolStripMenuItem_Click);
-            // 
-            // hủyHóaĐơnToolStripMenuItem
-            // 
-            this.hủyHóaĐơnToolStripMenuItem.Name = "hủyHóaĐơnToolStripMenuItem";
-            this.hủyHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
-            this.hủyHóaĐơnToolStripMenuItem.Text = "Hủy hóa đơn";
-            this.hủyHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.hủyHóaĐơnToolStripMenuItem_Click);
-            // 
-            // bwReportProduct
-            // 
-            this.bwReportProduct.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReportProduct_DoWork);
-            this.bwReportProduct.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwReportProduct_RunWorkerCompleted);
-            // 
-            // bwReportProductDate
-            // 
-            this.bwReportProductDate.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReportProductDate_DoWork);
-            this.bwReportProductDate.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwReportProductDate_RunWorkerCompleted);
-            // 
-            // bwSaleReport
-            // 
-            this.bwSaleReport.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwSaleReport_DoWork);
-            this.bwSaleReport.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwSaleReport_RunWorkerCompleted);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerID";
-            dataGridViewCellStyle27.Format = "dd/MM/yyyy";
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridViewTextBoxColumn2.HeaderText = "CustomerID";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "CustomerName";
-            this.Column6.HeaderText = "Tên khách";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column21
-            // 
-            this.Column21.DataPropertyName = "Phone";
-            this.Column21.HeaderText = "Điện thoại";
-            this.Column21.MinimumWidth = 6;
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            // 
-            // Column22
-            // 
-            this.Column22.DataPropertyName = "DistrictName";
-            this.Column22.HeaderText = "Quận";
-            this.Column22.MinimumWidth = 6;
-            this.Column22.Name = "Column22";
-            this.Column22.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TotalOrders";
-            dataGridViewCellStyle28.Format = "N0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tổng số đơn";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "TotalValue";
-            dataGridViewCellStyle29.Format = "N0";
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tổng tiền";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Column31
             // 
@@ -1279,79 +1075,226 @@
             this.Column30.Name = "Column30";
             this.Column30.ReadOnly = true;
             // 
-            // dgvCustomerReport_OrderDetail
+            // groupBox9
             // 
-            this.dgvCustomerReport_OrderDetail.AllowUserToAddRows = false;
-            this.dgvCustomerReport_OrderDetail.AllowUserToDeleteRows = false;
-            this.dgvCustomerReport_OrderDetail.AllowUserToOrderColumns = true;
-            this.dgvCustomerReport_OrderDetail.AllowUserToResizeColumns = false;
-            this.dgvCustomerReport_OrderDetail.AllowUserToResizeRows = false;
-            this.dgvCustomerReport_OrderDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox9.Controls.Add(this.dgvCustomerReport_Main);
+            this.groupBox9.Location = new System.Drawing.Point(6, 63);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(608, 567);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Tổng hợp";
+            // 
+            // dgvCustomerReport_Main
+            // 
+            this.dgvCustomerReport_Main.AllowUserToAddRows = false;
+            this.dgvCustomerReport_Main.AllowUserToDeleteRows = false;
+            this.dgvCustomerReport_Main.AllowUserToOrderColumns = true;
+            this.dgvCustomerReport_Main.AllowUserToResizeColumns = false;
+            this.dgvCustomerReport_Main.AllowUserToResizeRows = false;
+            this.dgvCustomerReport_Main.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomerReport_Main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomerReport_Main.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.Column6,
+            this.Column21,
+            this.Column22,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn1});
+            this.dgvCustomerReport_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCustomerReport_Main.Location = new System.Drawing.Point(3, 16);
+            this.dgvCustomerReport_Main.Name = "dgvCustomerReport_Main";
+            this.dgvCustomerReport_Main.ReadOnly = true;
+            this.dgvCustomerReport_Main.RowHeadersVisible = false;
+            this.dgvCustomerReport_Main.RowHeadersWidth = 51;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCustomerReport_Main.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            this.dgvCustomerReport_Main.RowTemplate.Height = 30;
+            this.dgvCustomerReport_Main.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCustomerReport_Main.Size = new System.Drawing.Size(602, 548);
+            this.dgvCustomerReport_Main.TabIndex = 0;
+            this.dgvCustomerReport_Main.SelectionChanged += new System.EventHandler(this.dgvCustomerReport_Main_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerID";
+            dataGridViewCellStyle27.Format = "dd/MM/yyyy";
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridViewTextBoxColumn2.HeaderText = "CustomerID";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "CustomerName";
+            this.Column6.HeaderText = "Tên khách";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "Phone";
+            this.Column21.HeaderText = "Điện thoại";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // Column22
+            // 
+            this.Column22.DataPropertyName = "DistrictName";
+            this.Column22.HeaderText = "Quận";
+            this.Column22.MinimumWidth = 6;
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TotalOrders";
+            dataGridViewCellStyle28.Format = "N0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tổng số đơn";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TotalValue";
+            dataGridViewCellStyle29.Format = "N0";
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Tổng tiền";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCustomerReport_OrderDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCustomerReport_OrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerReport_OrderDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.dgvCustomerReport_OrderDetail.Location = new System.Drawing.Point(4, 370);
-            this.dgvCustomerReport_OrderDetail.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCustomerReport_OrderDetail.Name = "dgvCustomerReport_OrderDetail";
-            this.dgvCustomerReport_OrderDetail.ReadOnly = true;
-            this.dgvCustomerReport_OrderDetail.RowHeadersVisible = false;
-            this.dgvCustomerReport_OrderDetail.RowHeadersWidth = 51;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCustomerReport_OrderDetail.RowsDefaultCellStyle = dataGridViewCellStyle21;
-            this.dgvCustomerReport_OrderDetail.RowTemplate.Height = 30;
-            this.dgvCustomerReport_OrderDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerReport_OrderDetail.Size = new System.Drawing.Size(793, 324);
-            this.dgvCustomerReport_OrderDetail.TabIndex = 3;
+            this.groupBox5.Controls.Add(this.btnCustomerReportSearch);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.dtpCustomerReportTo);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.dtpCustomerReportFrom);
+            this.groupBox5.Location = new System.Drawing.Point(3, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1221, 51);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tìm kiếm";
             // 
-            // dataGridViewTextBoxColumn16
+            // btnCustomerReportSearch
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Sản phẩm";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.btnCustomerReportSearch.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCustomerReportSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerReportSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerReportSearch.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerReportSearch.Location = new System.Drawing.Point(389, 12);
+            this.btnCustomerReportSearch.Name = "btnCustomerReportSearch";
+            this.btnCustomerReportSearch.Size = new System.Drawing.Size(91, 31);
+            this.btnCustomerReportSearch.TabIndex = 15;
+            this.btnCustomerReportSearch.Text = "Tìm kiếm";
+            this.btnCustomerReportSearch.UseVisualStyleBackColor = false;
+            this.btnCustomerReportSearch.Click += new System.EventHandler(this.btnCustomerReportSearch_Click);
             // 
-            // dataGridViewTextBoxColumn17
+            // label4
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Price";
-            dataGridViewCellStyle19.Format = "N0";
-            this.dataGridViewTextBoxColumn17.DefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridViewTextBoxColumn17.HeaderText = "Giá";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(198, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Đến ngày";
             // 
-            // dataGridViewTextBoxColumn18
+            // dtpCustomerReportTo
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Qty";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dtpCustomerReportTo.CustomFormat = "dd/MM/yyyy";
+            this.dtpCustomerReportTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCustomerReportTo.Location = new System.Drawing.Point(257, 19);
+            this.dtpCustomerReportTo.Name = "dtpCustomerReportTo";
+            this.dtpCustomerReportTo.ShowCheckBox = true;
+            this.dtpCustomerReportTo.Size = new System.Drawing.Size(126, 20);
+            this.dtpCustomerReportTo.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn19
+            // label7
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Total";
-            dataGridViewCellStyle20.Format = "N0";
-            this.dataGridViewTextBoxColumn19.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridViewTextBoxColumn19.HeaderText = "Tổng tiền";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Từ ngày";
+            // 
+            // dtpCustomerReportFrom
+            // 
+            this.dtpCustomerReportFrom.CustomFormat = "dd/MM/yyyy";
+            this.dtpCustomerReportFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCustomerReportFrom.Location = new System.Drawing.Point(64, 19);
+            this.dtpCustomerReportFrom.Name = "dtpCustomerReportFrom";
+            this.dtpCustomerReportFrom.ShowCheckBox = true;
+            this.dtpCustomerReportFrom.Size = new System.Drawing.Size(126, 20);
+            this.dtpCustomerReportFrom.TabIndex = 0;
+            // 
+            // bwLoadItems
+            // 
+            this.bwLoadItems.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadItems_DoWork);
+            this.bwLoadItems.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadItems_RunWorkerCompleted);
+            // 
+            // bwLoadOrder
+            // 
+            this.bwLoadOrder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadOrder_DoWork);
+            this.bwLoadOrder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadOrder_RunWorkerCompleted);
+            // 
+            // cmsOrder
+            // 
+            this.cmsOrder.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsOrder.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inHóaĐơnToolStripMenuItem,
+            this.hủyHóaĐơnToolStripMenuItem});
+            this.cmsOrder.Name = "cmsOrder";
+            this.cmsOrder.Size = new System.Drawing.Size(144, 48);
+            // 
+            // inHóaĐơnToolStripMenuItem
+            // 
+            this.inHóaĐơnToolStripMenuItem.Name = "inHóaĐơnToolStripMenuItem";
+            this.inHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.inHóaĐơnToolStripMenuItem.Text = "In hóa đơn";
+            this.inHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.inHóaĐơnToolStripMenuItem_Click);
+            // 
+            // hủyHóaĐơnToolStripMenuItem
+            // 
+            this.hủyHóaĐơnToolStripMenuItem.Name = "hủyHóaĐơnToolStripMenuItem";
+            this.hủyHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.hủyHóaĐơnToolStripMenuItem.Text = "Hủy hóa đơn";
+            this.hủyHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.hủyHóaĐơnToolStripMenuItem_Click);
+            // 
+            // bwReportProduct
+            // 
+            this.bwReportProduct.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReportProduct_DoWork);
+            this.bwReportProduct.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwReportProduct_RunWorkerCompleted);
+            // 
+            // bwReportProductDate
+            // 
+            this.bwReportProductDate.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReportProductDate_DoWork);
+            this.bwReportProductDate.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwReportProductDate_RunWorkerCompleted);
+            // 
+            // bwSaleReport
+            // 
+            this.bwSaleReport.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwSaleReport_DoWork);
+            this.bwSaleReport.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwSaleReport_RunWorkerCompleted);
             // 
             // ReportControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportControl";
-            this.Size = new System.Drawing.Size(1647, 809);
+            this.Size = new System.Drawing.Size(1235, 657);
             this.Load += new System.EventHandler(this.ReportControl_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1374,13 +1317,13 @@
             this.groupBox7.PerformLayout();
             this.tpCustomerReport.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_OrderDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_Order)).EndInit();
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_Main)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.cmsOrder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerReport_OrderDetail)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="13931008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShop.exe" size="14934016">
       <assemblyIdentity name="CoffeeShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cS3IMKxYXe3aOsc9pOKsDrSrzUJk0gGxVEa1NktC1e4=</dsig:DigestValue>
+        <dsig:DigestValue>P1FpRiiG8o8WwkaOx0LjK3H60YHMNKnQMMl+I9DTpKc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1DS0zIo5iVReu7bWLj1dg0TNbktGG5MY0t7DzDYQBHQ=</dsig:DigestValue>
+        <dsig:DigestValue>6omZCniEatEIXZocZFPR7w4VTuoWiMwVOWapUb3m/Kw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,13 +89,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CoffeeShop.exe.config" size="1061">
+  <file name="CoffeeShop.exe.config" size="1066">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FfP5/w+8XsLZBkpufsfGtWr5wRHugTBRASl8GccaFjw=</dsig:DigestValue>
+      <dsig:DigestValue>83DKsBNpTz0NTtTg5u+H4msUzDiv0vBZYBH0NjGlFDU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

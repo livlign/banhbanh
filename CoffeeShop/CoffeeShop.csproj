@@ -229,7 +229,9 @@
   <ItemGroup>
     <None Include="Resources\1475701063_f-cross_256.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\banhbanh.gif" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>

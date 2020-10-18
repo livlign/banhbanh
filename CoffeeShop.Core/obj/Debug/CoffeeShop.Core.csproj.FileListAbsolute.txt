@@ -29,3 +29,14 @@ D:\hehe\Git-banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.csproj.CoreCompil
 D:\hehe\Git-banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.csproj.CopyComplete
 D:\hehe\Git-banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.dll
 D:\hehe\Git-banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.pdb
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\CoffeeShop.Core.dll.config
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\CoffeeShop.Core.dll
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\CoffeeShop.Core.pdb
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\SubSonic.dll
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\SubSonic.pdb
+D:\Work\Git\banhbanh\CoffeeShop.Core\bin\Debug\SubSonic.xml
+D:\Work\Git\banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.csprojAssemblyReference.cache
+D:\Work\Git\banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.csproj.CoreCompileInputs.cache
+D:\Work\Git\banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.csproj.CopyComplete
+D:\Work\Git\banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.dll
+D:\Work\Git\banhbanh\CoffeeShop.Core\obj\Debug\CoffeeShop.Core.pdb

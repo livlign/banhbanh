@@ -1,0 +1,29 @@
+update tblTemplates set TemplateText = 
+N'
+<html>      <body>         <table align="center" width="90%" border="1" style="border-collapse:collapse; font-size: 18px;" cellpadding="5">              <tr>                  
+<td width="15%"><orderref></td>                  <td width="20%"><name></td>                  <td width="15%"><phone></td>                  <td width="50%"><address></td>              
+</tr>              <tr>                  <td colspan="3">                      <item>                  </td>                  <td valign="top">                      <summary>                  
+</td>              </tr>             <tr>                 <td colspan="4" align="right" style="font-size: 18px; font-family: Segeo Script; font-weight: bold; font-style: italic;">                     
+Handmade With Love - Lam''s Kitchen - 0975051977 - Facebook.com/lam.nctk                 </td>             </tr>          </table>      </body>  </html>  
+'
+where id = 3
+
+
+
+===========================================================
+
+
+ALTER proc [dbo].[spPrintOrder]
+@orderid int
+as
+select o.Id, o.OrderRef as OrderRef, o.Value, o.ShipCost, o.TotalValue
+	,o.Note, c.Name, c.Phone, c.Address
+	, STRING_AGG(convert(varchar,oi.Qty) + ' ' + p.ProductName + ': ' 
+	+ format(oi.Price, 'N0') + 'x' + convert(varchar,oi.Qty) + ' = ' + format(oi.Price * oi.Qty, 'N0'), '<br>') as Product	
+from tblOrders o
+inner join tblOrderItems oi on o.Id = oi.orderid
+inner join tblProducts p on oi.ProductId = p.Id
+inner join tblCustomers c on o.CustomerID = c.Id
+where o.Id = @orderid
+group by o.Id, o.OrderRef, o.Value, o.ShipCost, o.TotalValue
+	,o.Note, c.Name, c.Phone, c.Address
